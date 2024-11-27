@@ -12,7 +12,7 @@
 <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
         <img class="mx-auto h-20 w-auto" src="{{ asset('img/KedaiDiens.png') }}" alt="Your Company">
-        <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Sign in</h2>
+        <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Sign Up</h2>
     </div>
 
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
@@ -25,13 +25,32 @@
                 </div>
             </div>
 
+
+            <div>
+                <div class="flex items-center justify-between">
+                    <label for="name" class="block text-sm/6 font-medium text-gray-900">name</label>
+                </div>
+                <div class="mt-2">
+                    <input id="name" name="name" type="text" autocomplete="name" required
+                        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm/6">
+                </div>
+            </div>
+
+
             <div>
                 <div class="flex items-center justify-between">
                     <label for="password" class="block text-sm/6 font-medium text-gray-900">Password</label>
-                    <div class="text-sm">
-                        <a href="#" class="font-semibold text-neutral-950 hover:text-neutral-500">Forgot
-                            password?</a>
-                    </div>
+                </div>
+                <div class="mt-2">
+                    <input id="password" name="password" type="password" autocomplete="current-password" required
+                        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm/6">
+                </div>
+            </div>
+
+
+            <div>
+                <div class="flex items-center justify-between">
+                    <label for="password" class="block text-sm/6 font-medium text-gray-900">Confirm Password</label>
                 </div>
                 <div class="mt-2">
                     <input id="password" name="password" type="password" autocomplete="current-password" required
@@ -47,8 +66,8 @@
         </form>
 
         <p class="mt-10 text-center text-sm/6 text-gray-500">
-            Don't have an account yet?
-            <a href="/register" class="font-semibold text-neutral-950 hover:text-neutral-500">Register</a>
+            Already have an account?
+            <a href="/login" class="font-semibold text-neutral-950 hover:text-neutral-500">Login</a>
         </p>
     </div>
 </div>
