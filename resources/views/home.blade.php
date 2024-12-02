@@ -8,55 +8,10 @@
 
     {{-- End Logo --}}
     <title>Kedai Diens</title>
-    {{-- FOOTER --}}
-    <style>
-        /*
-         *  This is the marquee animation styles.
-         *  Instead of adding this CSS you may wish to implement in your tailwind config.
-         *  Learn more in the marquee Tailwind Config section
-         */
-        @keyframes marquee {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-        .animate-marquee {
-            animation: marquee 20s linear infinite;
-        }
-    </style>
-    <style>
-        /*
-         *  This is a container query used for the demo that does not need to be included
-         */
-        .container-block {
-            container-type: inline-size;
-        }
-        @container (max-width: 1100px) {
-            .container-block svg:nth-child(3),
-            .container-block svg:nth-child(4) {
-                display: none;
-            }
-        }
-    </style>
-    <style>[x-cloak]{display:none}</style>
-
-
     {{-- UI PINES --}}
     <script src="https://unpkg.com/alpinejs" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     {{-- END PINES  --}}
-
-    {{-- UI BladeWindUI --}}
-    <link href="{{ asset('vendor/bladewind/css/animate.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('vendor/bladewind/css/bladewind-ui.min.css') }}" rel="stylesheet" />
-    <script src="{{ asset('vendor/bladewind/js/helpers.js') }}"></script>
-    {{-- END BladeWindUI --}}
-
-
-
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 </head>
 <body>
@@ -164,7 +119,7 @@
                     <div class="relative z-20 w-full h-auto py-8 text-white bg-blue-400 border-t-0 border-yellow-200 px-7">
                         <a href="#_" class="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-blue-500 bg-white">Kedai Diens</a>
                         <h2 class="mb-5 text-5xl font-bold"><a href="#_">Snacks</a></h2>
-                        <p class="mb-2 text-lg font-normal text-blue-100 opacity-100">Enjoy our crispy, savory, and sweet snacks—perfect for any moment.</p>
+                        <p class="mb-2 text-lg font-normal text-blue-100 opacity-100">Enjoy our crispy, savory, and sweet snacks—perfect for any moment. And Enjoy with Family.</p>
 
                     </div>
                 </div>
@@ -223,6 +178,38 @@
         </div>
     </section>
    {{-- AKHIR MENU MAKANAN DAN MINUMAN  --}}
+
+    {{-- MAPS --}}
+    <div class="flex flex-wrap justify-center items-center h-auto p-5 pl-[6%] pt-[9%]">
+        <div class="w-full md:w-2/5 p-4">
+          <h2 class="text-xl md:text-7xl font-semibold mb-5">We Location 📍</h2>
+          <form class="space-y-4">
+            <div>
+              <input type="text" id="fullName" name="fullName" placeholder='Full Name' class="mt-1 p-4 w-full border rounded-md" />
+            </div>
+            <div>
+              <input type="email" id="email" name="email" placeholder='Email' class="mt-1 p-4 w-full border rounded-md" />
+            </div>
+            <div>
+              <textarea id="message" name="message" placeholder='Message' class="mt-1 p-4 w-full border rounded-md" rows="4"></textarea>
+            </div>
+            <button type="submit" class="px-8 py-4 bg-black text-white hover:bg-blue-700">Submit</button>
+          </form>
+        </div>
+        <div class="w-full md:w-1/2 p-4 flex justify-center">
+          <div class="rounded-full overflow-hidden w-[35rem] h-[35rem]">
+            <iframe
+              class="w-[35rem] h-[35rem]"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.7613778346804!2d107.56109567483539!3d-6.919105493080502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e52b14079f63%3A0x4415d90d080d6829!2sKEDAI%20DIEN&#39;S!5e0!3m2!1sid!2sid!4v1733150776172!5m2!1sid!2sid"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    {{-- MAPS --}}
+
 
     {{-- Perusahaan kepercayaan --}}
     <section class="bg-white pt-7 pb-14">
