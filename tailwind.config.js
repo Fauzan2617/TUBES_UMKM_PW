@@ -1,6 +1,14 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 
 /** @type {import('tailwindcss').Config} */
+
+module.exports = {
+    //...
+    plugins: [
+      require('daisyui'),
+    ],
+  }
+  
 export default {
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
@@ -17,4 +25,6 @@ export default {
         },
     },
     plugins: [],
+
+
 };
