@@ -105,8 +105,8 @@
 
                 <!-- Main Hero Content -->
                 <div class="container max-w-sm py-32 mx-auto mt-px text-left sm:max-w-md md:max-w-lg sm:px-4 md:max-w-none md:text-center" >
-                    <h1 class="text-3xl font-bold leading-10 tracking-tight text-left text-gray-900 md:text-center sm:text-4xl md:text-7xl lg:text-8xl">Welcome in Kedai Diens<br class="hidden sm:block"> All Variant Mie </h1>
-                    <div class="mx-auto mt-5 text-gray-400 md:mt-8 md:max-w-lg md:text-center md:text-xl">Simplifying the creation of landing pages, blog pages, application pages and so much more!</div>
+                    <h1 class="text-3xl font-bold leading-10 tracking-tight text-left text-gray-900 md:text-center sm:text-4xl md:text-7xl lg:text-8xl">Welcome to Kedai Diens<br class="hidden sm:block"> Noodles for Every Taste !</h1>
+                    <div class="mx-auto mt-5 text-gray-400 md:mt-8 md:max-w-lg md:text-center md:text-xl">Enjoy All Noodle Variants at Kedai Diens !</div>
                     <div class="flex flex-col items-center justify-center mt-8 space-y-4 text-center sm:flex-row sm:space-y-0 sm:space-x-4">
                         <span class="relative inline-flex w-full md:w-auto">
                             <a href="#_" class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-medium leading-6 text-white bg-gray-900 border border-transparent rounded-full xl:px-10 md:w-auto hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
@@ -114,7 +114,7 @@
                             </a>
                         </span>
                         <span class="relative inline-flex w-full md:w-auto">
-                            <a href="#_" class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-medium leading-6 text-gray-900 bg-gray-100 border border-transparent rounded-full xl:px-10 md:w-auto hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200">Learn More</a>
+                            <a href="#_" class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-medium leading-6 text-gray-900 bg-gray-100 border border-transparent rounded-full xl:px-10 md:w-auto hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200">Learn About Us</a>
                         </span>
                     </div>
                 </div>
@@ -133,16 +133,16 @@
         <div class="absolute w-full h-32 bg-gradient-to-b from-gray-100 to-white"></div>
         <div class="relative w-full px-5 py-10 mx-auto sm:py-12 md:py-16 md:px-10 max-w-7xl">
 
-            <h1 class="mb-1 text-4xl font-extrabold leading-none text-gray-900 lg:text-5xl xl:text-6xl sm:mb-3"><a href="#_">Makanan And Minuman</a></h1>
-            <p class="text-lg font-medium text-gray-500 sm:text-2xl">Semua Varian Mie ada disini</p>
+            <h1 class="mb-1 text-4xl font-extrabold leading-none text-gray-900 lg:text-5xl xl:text-6xl sm:mb-3"><a href="#_">Noodles,Drink And Snack</a></h1>
+            <p class="text-lg font-medium text-gray-500 sm:text-2xl">All Variant Noodles In Here</p>
             <div class="flex grid h-full grid-cols-12 gap-10 pb-10 mt-8 sm:mt-16">
                 <div class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 xl:col-span-4">
                     <a href="#_"> <img src="{{ asset('img/KedaiDiens.png') }}" class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" alt="">
                     </a>
                     <div class="relative z-20 w-full h-auto py-8 text-white bg-purple-500 border-t-0 border-yellow-200 px-7">
-                        <a href="#_" class="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-purple-500 bg-white">Resources</a>
-                        <h2 class="mb-5 text-5xl font-bold"><a href="#_">Refreshing Designs</a></h2>
-                        <p class="mb-2 text-lg font-normal text-purple-100 opacity-100">Quench satisfying designs to help you stir up emotion and tell a story.</p>
+                        <a href="#_" class="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-purple-500 bg-white">Kedai Diens</a>
+                        <h2 class="mb-5 text-5xl font-bold"><a href="#_">Noodles</a></h2>
+                        <p class="mb-2 text-lg font-normal text-purple-100 opacity-100">Savor the rich flavors and perfect texture of our premium noodles, crafted to satisfy every craving.</p>
 
                     </div>
                 </div>
@@ -151,19 +151,20 @@
                     <a href="#_" class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style="background-image:url('https://cdn.devdojo.com/images/may2021/orange.jpg')">
                     </a>
                     <div class="relative z-20 w-full h-auto py-8 text-white bg-blue-400 border-t-0 border-yellow-200 px-7">
-                        <a href="#_" class="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-blue-500 bg-white">Lifestyle</a>
-                        <h2 class="mb-5 text-5xl font-bold"><a href="#_">Healthier Lifestyle</a></h2>
-                        <p class="mb-2 text-lg font-normal text-blue-100 opacity-100">Living a healthier lifestyle will help with your productivity and your mind-set.</p>
+                        <a href="#_" class="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-blue-500 bg-white">Kedai Diens</a>
+                        <h2 class="mb-5 text-5xl font-bold"><a href="#_">Drinks</a></h2>
+                        <p class="mb-2 text-lg font-normal text-blue-100 opacity-100">Refresh your day with our flavorful drinks, from fruity delights to creamy indulgences.</p>
 
                     </div>
                 </div>
 
-                <div class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group sm:col-span-12 xl:col-span-4 sm:flex-row xl:flex-col">
-                    <a href="#_" class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style="background-image:url('https://cdn.devdojo.com/images/may2021/gbc.jpg')"></a>
-                    <div class="relative z-20 flex flex-col items-start justify-center w-full h-auto py-8 text-white bg-yellow-400 border-t-0 border-yellow-200 sm:h-full xl:h-auto px-7">
-                        <a href="#_" class="inline-block text-xs font-semibold absolute sm:mb-5 xl:mb-0 sm:relative xl:absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-yellow-400 bg-white">Entertainment</a>
-                        <h2 class="mb-5 text-5xl font-bold"><a href="#_">Gaming Evolution</a></h2>
-                        <p class="mb-2 text-lg font-normal opacity-100 text-yellow-50">Learn about the evolution of gaming and how it started a revolution.</p>
+                <div class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 xl:col-span-4">
+                    <a href="#_" class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110" style="background-image:url('https://cdn.devdojo.com/images/may2021/orange.jpg')">
+                    </a>
+                    <div class="relative z-20 w-full h-auto py-8 text-white bg-blue-400 border-t-0 border-yellow-200 px-7">
+                        <a href="#_" class="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-blue-500 bg-white">Kedai Diens</a>
+                        <h2 class="mb-5 text-5xl font-bold"><a href="#_">Snacks</a></h2>
+                        <p class="mb-2 text-lg font-normal text-blue-100 opacity-100">Enjoy our crispy, savory, and sweet snacks—perfect for any moment.</p>
 
                     </div>
                 </div>
@@ -175,10 +176,13 @@
                         </a>
                         <div class="relative flex flex-col items-start px-6 bg-white border border-t-0 border-gray-200 py-7 rounded-b-2xl">
                             <div class="bg-indigo-400 absolute top-0 -mt-3 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-full text-xs font-medium uppercase text-white inline-block">
-                                <span>Inspiration</span>
+                                <span>Noodles</span>
                             </div>
-                            <h2 class="text-base font-bold sm:text-lg md:text-xl"><a href="#_">Best Workstations of the Year</a></h2>
-                            <p class="mt-2 text-sm text-gray-500">Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
+                            <h2 class="text-base font-bold sm:text-lg md:text-xl"><a href="#_">Bangladesh Noodles</a></h2>
+                            <p class="mt-2 text-sm text-gray-500">Authentic noodles with rich spices from Bangladesh. Savory, spicy, and full of enticing aromas. Perfect for any time!</p>
+                            <button type="button" class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md mt-3 bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none">
+                                Detail Produk
+                            </button>
                         </div>
                     </div>
 
@@ -188,23 +192,29 @@
                         </a>
                         <div class="relative flex flex-col items-start px-6 bg-white border border-t-0 border-gray-200 py-7 rounded-b-2xl">
                             <div class="bg-red-400 absolute top-0 -mt-3 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-full text-xs font-medium uppercase text-white inline-block">
-                                <span>Food</span>
+                                <span>Noodles</span>
                             </div>
-                            <h2 class="text-base font-bold sm:text-lg md:text-xl"><a href="#_">Eating for Productivity</a></h2>
-                            <p class="mt-2 text-sm text-gray-500">Learn how to be more disciplined in your diet and how you can eat to maximize productivity.</p>
+                            <h2 class="text-base font-bold sm:text-lg md:text-xl"><a href="#_">Aceh Noodlesgit </a></h2>
+                            <p class="mt-2 text-sm text-gray-500">Traditional Indonesian noodles with bold spices and rich flavors. A perfect blend of savory, spicy, and aromatic goodness!</p>
+                            <button type="button" class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md mt-3 bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none">
+                                Detail Produk
+                            </button>
                         </div>
                     </div>
 
                     <div class="flex flex-col items-start col-span-12 overflow-hidden shadow-sm rounded-xl md:col-span-6 lg:col-span-4">
                         <a href="#_" class="block transition duration-200 ease-out transform hover:scale-110">
-                            <img class="object-cover w-full shadow-sm max-h-56" src="https://cdn.devdojo.com/images/may2021/book-design.jpg">
+                            <img class="object-cover w-full shadow-sm max-h-56" src="https://cdn.devdojo.com/images/may2021/snacks.jpg">
                         </a>
                         <div class="relative flex flex-col items-start px-6 bg-white border border-t-0 border-gray-200 py-7 rounded-b-2xl">
-                            <div class="bg-purple-500 absolute top-0 -mt-3 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-full text-xs font-medium uppercase text-white inline-block">
-                                <span>Resources</span>
+                            <div class="bg-red-400 absolute top-0 -mt-3 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-full text-xs font-medium uppercase text-white inline-block">
+                                <span>Drink</span>
                             </div>
-                            <h2 class="text-base font-bold sm:text-lg md:text-xl"><a href="#_">A Design Mind-set</a></h2>
-                            <p class="mt-2 text-sm text-gray-500">What does it mean to have a design mind-set? Learn how to improve your eye for design.</p>
+                            <h2 class="text-base font-bold sm:text-lg md:text-xl"><a href="#_">Red Genuine</a></h2>
+                            <p class="mt-2 text-sm text-gray-500">A refreshing mix of mint, lime, and sparkling soda. Perfect to cool you down and brighten your day! And cool in your mounth</p>
+                            <button type="button" class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md mt-3 bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none">
+                                Detail Produk
+                            </button>
                         </div>
                     </div>
                 </div>
