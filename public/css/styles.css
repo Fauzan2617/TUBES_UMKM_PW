@@ -11,7 +11,7 @@ header {
     background-color: white;
     color: white;
     text-align: center;
-    padding: 2em 0;
+    padding: 0em 0;
 }
 
 main {
@@ -43,7 +43,7 @@ h1, h2 {
 }
 
 footer {
-    background-color: black;
+    background-color:white;
     color: white;
     text-align: center;
     padding: 1em 0;
