@@ -85,7 +85,7 @@
                                     </a>
                                 </div>
                                 <div class="flex flex-col items-start justify-end w-full pt-4 md:items-center md:w-1/3 md:flex-row md:py-0">
-                                    <a href="{{ route('login') }}" class="w-full px-6 py-2 mr-0 text-gray-700 md:px-3 md:mr-2 lg:mr-3 md:w-auto">Sign In</a>
+                                    <a href="/login" class="w-full px-6 py-2 mr-0 text-gray-700 md:px-3 md:mr-2 lg:mr-3 md:w-auto">Sign In</a>
                                     <a href="#_" class="inline-flex items-center w-full px-5 px-6 py-3 text-sm font-medium leading-4 text-white bg-gray-900 md:w-auto md:rounded-full hover:bg-gray-800 focus:outline-none md:focus:ring-2 focus:ring-0 focus:ring-offset-2 focus:ring-gray-800">Sign Up</a>
                                 </div>
                             </div>
@@ -105,17 +105,17 @@
                     </div>
                     <div class="mx-auto max-w-2xl py-32 sm:py-20 lg:py-5">
                       <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-                        
+
                       </div>
                       <div class="text-center">
                         <h1 class="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">About</h1>
                         <p class="mt-5 text-pretty text-lg font-medium text-gray-500">
                             Selamat datang di Kedai Diens, tempat di mana cita rasa asli Indonesia bertemu dengan kelezatan mie yang menggugah selera. Kami menyajikan mie dengan rempah-rempah bumbu Indonesia yang kaya, memadukan tradisi kuliner lokal dengan sentuhan inovatif yang membuat setiap suapan terasa istimewa.
-                            
+
                             Di Kedai Diens, kami mengutamakan kearifan lokal dengan menggunakan rempah-rempah pilihan yang mengandung sejarah panjang dan kekayaan rasa. Kami percaya bahwa setiap hidangan adalah sebuah perjalanan rasa yang membawa Anda lebih dekat dengan keindahan budaya Indonesia. Dengan desain yang sederhana dan otentik, kedai kami menciptakan suasana yang ramah dan nyaman, sehingga Anda dapat menikmati makanan dengan santai bersama orang-orang terdekat.
-                            
+
                             Kami berkomitmen untuk menyajikan mie lezat yang dipadukan dengan rempah-rempah khas Indonesia, memberikan pengalaman kuliner yang tidak hanya menggugah selera, tetapi juga merayakan kekayaan tradisi kuliner tanah air. Di Kedai Diens, setiap hidangan adalah tentang kehangatan, kenikmatan, dan keunikan yang akan membuat Anda kembali lagi.
-                            
+
                             Selamat menikmati!</p>
                         <div class="mt-10 flex items-center justify-center gap-x-6">
                           <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
@@ -141,7 +141,7 @@
 
 
 
-   
+
     {{-- Perusahaan kepercayaan --}}
     <section class="bg-white pt-7 pb-14">
         <div class="container px-8 mx-auto sm:px-12 lg:px-20">
