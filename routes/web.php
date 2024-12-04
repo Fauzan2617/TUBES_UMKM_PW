@@ -19,6 +19,16 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/about', function () {
     return view('about');
 })->name('about');
-// Route::get('/detailproduct', function () {
-//     return view('detailproduct');
-// })->name('detailproduct');
+
+Route::get('/halamanproduct', function () {
+    return view('halamanproduct');
+})->name('halamanproduct');
+Route::get('/detailproduct', function () {
+    return view('detailproduct');
+})->name('detailproduct');
+
+
+// Bagian Admin
+Route::get('views_admin/dashboardhome', function () {
+    return view('/views_admin/dashboardhome');
+})->name('/views_admin/dashboardhome');
