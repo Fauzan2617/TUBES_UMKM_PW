@@ -97,7 +97,7 @@
                                     class="flex flex-col items-start justify-center w-full space-x-6 text-center lg:space-x-8 md:w-2/3 md:mt-0 md:flex-row md:items-center">
                                     <a href="{{ route('home') }}"class="inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-black md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center">Home</a>
                                     <a href="{{ route('about') }}"class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-black lg:mx-3 md:text-center">About</a>
-                                    <a href="#_"class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-black lg:mx-3 md:text-center">Produk</a>
+                                    <a href="{{ route('halamanproduct') }}"class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-black lg:mx-3 md:text-center">Produk</a>
                                     <a href="#_"class="absolute top-0 left-0 hidden py-2 mt-6 ml-10 mr-2 text-gray-600 lg:inline-block md:mt-0 md:ml-2 lg:mx-3 md:relative">
                                         <svg class="inline w-5 h-5" fill="none" stroke-linecap="round"
                                             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
@@ -133,6 +133,9 @@
                 </nav>
                 <!-- Navbar end -->
 
+
+
+
                 <!-- Main Hero Content -->
                 <div class="relative isolate px-6 pt-14 lg:px-8">
                     <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
@@ -142,7 +145,7 @@
                       <div class="hidden sm:mb-8 sm:flex sm:justify-center">
                       </div>
                 <div
-                    class="container max-w-sm py-32 mx-auto mt-px text-left sm:max-w-md md:max-w-lg sm:px-4 md:max-w-none md:text-center">
+                    class="container max-w-sm py-30 mx-auto mt-px text-left sm:max-w-md md:max-w-lg sm:px-4 md:max-w-none md:text-center">
                     <h1
                         class="mx-auto text-3xl font-bold leading-10 tracking-tight text-left text-gray-900 md:text-center sm:text-4xl md:text-7xl lg:text-8xl">
                         Welcome to Kedai Diens<br class="hidden sm:block"> Noodles for Every Taste !</h1>
@@ -151,13 +154,13 @@
                     <div
                         class="flex flex-col items-center justify-center mt-8 space-y-4 text-center sm:flex-row sm:space-y-0 sm:space-x-4">
                         <span class="relative inline-flex w-full md:w-auto">
-                            <a href="#_"
+                            <a href="{{  route('halamanproduct') }}"
                                 class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-medium leading-6 text-white bg-gray-900 border border-transparent rounded-full xl:px-10 md:w-auto hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
                                 Purchase Now
                             </a>
                         </span>
                         <span class="relative inline-flex w-full md:w-auto">
-                            <a href="#_"
+                            <a href="{{ route('about') }}"
                                 class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-medium leading-6 text-gray-900 bg-gray-100 border border-transparent rounded-full xl:px-10 md:w-auto hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200">Learn
                                 About Us</a>
                         </span>
@@ -184,7 +187,7 @@
             <div class="flex grid h-full grid-cols-12 gap-10 pb-10 mt-8 sm:mt-16">
                 <div
                     class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 xl:col-span-4">
-                    <a href="#_"> <img src="{{ asset('img/KedaiDiens.png') }}"
+                    <a href="{{ route('halamanproduct') }}#noodles"> <img src="{{ asset('img/KedaiDiens.png') }}"
                             class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110"
                             alt="">
                     </a>
@@ -202,16 +205,16 @@
 
                 <div
                     class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 xl:col-span-4">
-                    <a href="#_"
+                    <a href="{{ route('halamanproduct') }}#drinks"
                         class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110"
                         style="background-image:url('https://cdn.devdojo.com/images/may2021/orange.jpg')">
                     </a>
                     <div
                         class="relative z-20 w-full h-auto py-8 text-white bg-blue-400 border-t-0 border-yellow-200 px-7">
-                        <a href="#_"
+                        <a href="{{ route('halamanproduct') }}#drinks"
                             class="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-blue-500 bg-white">Kedai
                             Diens</a>
-                        <h2 class="mb-5 text-5xl font-bold"><a href="#_">Drinks</a></h2>
+                        <h2 class="mb-5 text-5xl font-bold"><a href="{{ route('halamanproduct') }}#drinks">Drinks</a></h2>
                         <p class="mb-2 text-lg font-normal text-blue-100 opacity-100">Refresh your day with our
                             flavorful drinks, from fruity delights to creamy indulgences.</p>
 
@@ -220,16 +223,16 @@
 
                 <div
                     class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 xl:col-span-4">
-                    <a href="#_"
+                    <a href="{{ route('halamanproduct') }}#snacks"
                         class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110"
                         style="background-image:url('https://cdn.devdojo.com/images/may2021/orange.jpg')">
                     </a>
                     <div
                         class="relative z-20 w-full h-auto py-8 text-white bg-blue-400 border-t-0 border-yellow-200 px-7">
-                        <a href="#_"
+                        <a href="{{ route('halamanproduct') }}#snacks"
                             class="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-blue-500 bg-white">Kedai
                             Diens</a>
-                        <h2 class="mb-5 text-5xl font-bold"><a href="#_">Snacks</a></h2>
+                        <h2 class="mb-5 text-5xl font-bold"><a href="{{ route('halamanproduct') }}#snacks">Snacks</a></h2>
                         <p class="mb-2 text-lg font-normal text-blue-100 opacity-100">Enjoy our crispy, savory, and
                             sweet snacks—perfect for any moment. And Enjoy with Family.</p>
 

@@ -1,22 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dashboard</title>
-    {{-- Logo Situs --}}
-    <link rel="icon" href="{{ asset ('img/KedaiDiens.png') }}" type="image/png" sizes="512x512">
-    <script src="https://unpkg.com/alpinejs" defer></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
 <body>
     <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Responsive Dashboard</title>
+        <title>Dashboard Admin</title>
+    {{-- Logo Situs --}}
+        <link rel="icon" href="{{ asset ('img/KedaiDiens.png') }}" type="image/png" sizes="512x512">
+        <script src="https://unpkg.com/alpinejs" defer></script>
         <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
         <script src="https://cdn.tailwindcss.com"></script>
         <style>
@@ -66,9 +59,13 @@
             }
         </style>
     </head>
+
+
     <body class="bg-indigo-50 min-h-screen overflow-x-hidden">
         <div class="overlay fixed inset-0 bg-indigo-900/50 z-40 hidden opacity-0 transition-opacity duration-300"></div>
 
+
+        {{-- HEADER --}}
         <header class="fixed w-full bg-white text-indigo-800 z-50 shadow-lg animate-slide-down">
             <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between h-16">
                 <button class="mobile-menu-button p-2 lg:hidden">
@@ -86,6 +83,10 @@
                 </div>
             </div>
         </header>
+        {{-- END HEADER --}}
+
+
+
 
         <div class="pt-16 max-w-7xl mx-auto flex">
             <aside class="sidebar fixed lg:static w-[240px] bg-indigo-50 h-[calc(100vh-4rem)] lg:h-auto transform -translate-x-full lg:translate-x-0 transition-transform duration-300 z-45 overflow-y-auto p-4">
@@ -97,12 +98,7 @@
                     </a>
                     <a href="#" class="flex items-center text-gray-600 hover:text-indigo-800 py-4 transition-all duration-300 hover:translate-x-1">
                         <span class="material-icons-outlined mr-2">tune</span>
-                        Some menu item
-                        <span class="material-icons-outlined ml-auto">keyboard_arrow_right</span>
-                    </a>
-                    <a href="#" class="flex items-center text-gray-600 hover:text-indigo-800 py-4 transition-all duration-300 hover:translate-x-1">
-                        <span class="material-icons-outlined mr-2">file_copy</span>
-                        Another menu item
+                        Product
                         <span class="material-icons-outlined ml-auto">keyboard_arrow_right</span>
                     </a>
                 </div>
@@ -111,11 +107,6 @@
                     <a href="#" class="flex items-center text-gray-600 hover:text-indigo-800 py-4 transition-all duration-300 hover:translate-x-1">
                         <span class="material-icons-outlined mr-2">face</span>
                         Profile
-                        <span class="material-icons-outlined ml-auto">keyboard_arrow_right</span>
-                    </a>
-                    <a href="#" class="flex items-center text-gray-600 hover:text-indigo-800 py-4 transition-all duration-300 hover:translate-x-1">
-                        <span class="material-icons-outlined mr-2">settings</span>
-                        Settings
                         <span class="material-icons-outlined ml-auto">keyboard_arrow_right</span>
                     </a>
                     <a href="#" class="flex items-center text-gray-600 hover:text-indigo-800 py-4 transition-all duration-300 hover:translate-x-1">
@@ -130,10 +121,10 @@
                 <div class="flex flex-col lg:flex-row gap-4 mb-6">
                     <div class="flex-1 bg-indigo-100 border border-indigo-200 rounded-xl p-6 animate-fade-in">
                         <h2 class="text-4xl md:text-5xl text-blue-900">
-                            Welcome <br><strong>Dash</strong>
+                            Welcome <br><strong>Dashbord</strong>
                         </h2>
                         <span class="inline-block mt-8 px-8 py-2 rounded-full text-xl font-bold text-white bg-indigo-800">
-                            01:51
+                            Fauzan
                         </span>
                     </div>
 

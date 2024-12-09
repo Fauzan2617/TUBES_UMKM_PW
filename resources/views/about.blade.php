@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kedai Diens</title>
+    <link rel="icon" href="{{ asset ('img/KedaiDiens.png') }}" type="image/png" sizes="512x512">
     {{-- FOOTER --}}
     <style>
         /*
@@ -60,7 +61,7 @@
 
 
     {{-- HEADER/PEMBUKA --}}
-    <header class="padding">
+    <header class="padding pb-5" >
         <section class="w-full px-6 pb-12 antialiased bg-white">
             <div class="mx-auto max-w-7xl">
                     <!-- Navbar -->
@@ -79,7 +80,7 @@
                                 <div class="flex flex-col items-start justify-center w-full space-x-6 text-center lg:space-x-8 md:w-2/3 md:mt-0 md:flex-row md:items-center">
                                     <a href="{{ route('home') }}" class="inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-black md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center">Home</a>
                                     <a href="{{ route('about') }}" class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-black lg:mx-3 md:text-center">About</a>
-                                    <a href="#_" class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-black lg:mx-3 md:text-center">Produk</a>
+                                    <a href="{{ route('halamanproduct') }}" class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-black lg:mx-3 md:text-center">Produk</a>
                                     <a href="#_" class="absolute top-0 left-0 hidden py-2 mt-6 ml-10 mr-2 text-gray-600 lg:inline-block md:mt-0 md:ml-2 lg:mx-3 md:relative">
                                         <svg class="inline w-5 h-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                                     </a>
@@ -99,7 +100,7 @@
                     <!-- Navbar end -->
 
                 <!-- Main Hero Content -->
-                <div class="relative isolate px-6 pt-14 lg:px-8">
+                <div class="relative isolate px-6 pt-11 lg:px-8">
                     <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
                       <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#d66c7a] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
                     </div>
@@ -118,12 +119,12 @@
 
                             Selamat menikmati!</p>
                         <div class="mt-10 flex items-center justify-center gap-x-6">
-                          <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
-                          <a href="#" class="text-sm/6 font-semibold text-gray-900">Our Product<span aria-hidden="true">→</span></a>
+                          <a href="{{ route('home') }}" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
+                          <a href="{{ route ('halamanproduct') }}" class="text-sm/6 font-semibold text-gray-900">Our Product<span aria-hidden="true">→</span></a>
                         </div>
                         <div class=" mt-10 flex items-center justify-center gap-x-6">
                             <div class="flex items-center justify-center col-span-6 sm:col-span-4 md:col-span-3 xl:col-span-2">
-                                <img src="{{ asset('img/instagram.png') }}" alt="" class="block object-contain h-12 xl:px-2 md:w-auto" />
+                               <a href="#"><img src="{{ asset('img/instagram.png') }}" alt="" class="block object-contain h-12 xl:px-2 md:w-auto" /></a>
                                 <img src="{{ asset('img/wa.png') }}" alt="" class="block object-contain h-12 xl:px-2" />
                                 <img src="{{ asset('img/shopeenew.jpg') }}" alt="" class="block object-contain h-12 xl:px-2" />
                                 <img src="{{ asset('img/grabnew.jpg') }}" alt="" class="block object-contain h-12 xl:px-2" />
@@ -143,7 +144,7 @@
 
 
     {{-- Perusahaan kepercayaan --}}
-    <section class="bg-white pt-7 pb-14">
+    <section class="bg-white pb-14 ">
         <div class="container px-8 mx-auto sm:px-12 lg:px-20">
             <h1 class="text-sm font-bold tracking-wide text-center text-gray-800 uppercase mb-7">Trusted by top-leading companies.</h1>
             <div class="flex grid items-center justify-center grid-cols-4 grid-cols-12 gap-y-8">
@@ -230,7 +231,7 @@
 
 
 
-    
+
         <script src="{{ asset('js/script.js') }}"></script>
 </body>
 </html>

@@ -23,6 +23,7 @@ Route::get('/about', function () {
 Route::get('/halamanproduct', function () {
     return view('halamanproduct');
 })->name('halamanproduct');
+
 Route::get('/detailproduct', function () {
     return view('detailproduct');
 })->name('detailproduct');
@@ -32,3 +33,11 @@ Route::get('/detailproduct', function () {
 Route::get('views_admin/dashboardhome', function () {
     return view('/views_admin/dashboardhome');
 })->name('/views_admin/dashboardhome');
+
+Route::get('views_admin/crudproduk', function () {
+    return view('/views_admin/crudproduk');
+})->name('/views_admin/crudproduk');
+
+Route::get('views_admin/produk', function () {
+    return view('/views_admin/produk');
+})->name('/views_admin/produk');
