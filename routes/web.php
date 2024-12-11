@@ -5,7 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 
 Route::get('/', fn () => view('home'));
-Route::get('/home', fn () => view());
+Route::get('/home', fn () => view('home'));
 
 
 // LOGIN DAN REGISTER
@@ -20,7 +20,7 @@ Route::post('/register', [RegisterController::class, 'store']);
 // BAGIAN USER
 route::get('/about', fn() => view('about'));
 
-Route::get('/halamanproduct', fn () => view('view'));
+Route::get('/halamanproduct', fn () => view('halamanproduct'));
 
 Route::get('/detailproduct', fn () => view('detailproduct'));
 
@@ -34,3 +34,5 @@ Route::get('views_admin/dashboardhome', fn () => view('views_admin.dashboardhome
 Route::get('views_admin/crudproduk', fn () => view('views_admin.crudproduk'));
 
 Route::get('views_admin/produk', fn ()=> view('views_admin.produk'));
+
+Route::get('views_admin/profile', fn ()=> view('views_admin.profile'));
