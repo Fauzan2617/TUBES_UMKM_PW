@@ -33,9 +33,9 @@
                 <div
                     class="flex flex-col items-start justify-center w-full space-x-6 text-center lg:space-x-8 md:w-2/3 md:mt-0 md:flex-row md:items-center">
 
-                    <x-nav-link href="/home" :active="request()->is('home')">Home</x-nav-link>
-                    <x-nav-link href="/about" :active="request()->is('about')">About</x-nav-link>
-                    <x-nav-link href="/halamanproduct" :active="request()->is('halamanproduct')">Produk</x-nav-link>
+                    <x-nav-link href="/views_admin/dashboardhome" :active="request()->is('views_admin/dashboardhome')">Dashboard</x-nav-link>
+                    <x-nav-link href="/views_admin/produk" :active="request()->is('views_admin/produk')">Produk</x-nav-link>
+                    <x-nav-link href="/views_admin/profile" :active="request()->is('views_admin/profile')">Profile</x-nav-link>
 
                     <a
                         href="#_"class="absolute top-0 left-0 hidden py-2 mt-6 ml-10 mr-2 text-gray-600 lg:inline-block md:mt-0 md:ml-2 lg:mx-3 md:relative">

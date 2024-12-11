@@ -68,56 +68,8 @@
 
 
  {{-- HEADER --}}
- <header class="fixed w-full bg-white text-indigo-800 z-50 shadow-lg animate-slide-down">
-    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between h-16">
-        <button class="mobile-menu-button p-2 lg:hidden">
-            <span class="material-icons-outlined text-2xl">menu</span>
-        </button>
-        <div class="text-xl font-bold text-blue-900">
-            Admin<span class="text-indigo-800">Panel</span>
-        </div>
-        <div class="flex items-center space-x-2">
-            <span class="material-icons-outlined p-2 text-2xl cursor-pointer hover:text-indigo-800 transition-transform duration-300 hover:scale-110 hidden md:block">search</span>
-            <span class="material-icons-outlined p-2 text-2xl cursor-pointer hover:text-indigo-800 transition-transform duration-300 hover:scale-110 hidden md:block">notifications</span>
-            <img class="w-10 h-10 rounded-full transition-transform duration-300 hover:scale-110 object-cover"
-                 src="https://i.pinimg.com/564x/de/0f/3d/de0f3d06d2c6dbf29a888cf78e4c0323.jpg"
-                 alt="Profile">
-        </div>
-    </div>
-</header>
+ <x-produk-admin.navbar-admin></x-produk-admin.navbar-admin>
 {{-- END HEADER --}}
-
-
-{{-- LEFT MENU --}}
-<div class="pt-16 max-w-7xl mx-auto flex">
-    <aside class="sidebar fixed lg:static w-[240px] bg-indigo-50 h-[calc(100vh-4rem)] lg:h-auto transform -translate-x-full lg:translate-x-0 transition-transform duration-300 z-45 overflow-y-auto p-4">
-        <div class="bg-white rounded-xl shadow-lg mb-6 p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-            <a href="#" class="flex items-center text-gray-600 hover:text-indigo-800 py-4 transition-all duration-300 hover:translate-x-1">
-                <span class="material-icons-outlined mr-2">dashboard</span>
-                Home
-                <span class="material-icons-outlined ml-auto">keyboard_arrow_right</span>
-            </a>
-            <a href="#" class="flex items-center text-gray-600 hover:text-indigo-800 py-4 transition-all duration-300 hover:translate-x-1">
-                <span class="material-icons-outlined mr-2">tune</span>
-                CRUD Produk
-                <span class="material-icons-outlined ml-auto">keyboard_arrow_right</span>
-            </a>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-lg p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-            <a href="#" class="flex items-center text-gray-600 hover:text-indigo-800 py-4 transition-all duration-300 hover:translate-x-1">
-                <span class="material-icons-outlined mr-2">face</span>
-                Profile
-                <span class="material-icons-outlined ml-auto">keyboard_arrow_right</span>
-            </a>
-            <a href="#" class="flex items-center text-gray-600 hover:text-indigo-800 py-4 transition-all duration-300 hover:translate-x-1">
-                <span class="material-icons-outlined mr-2">power_settings_new</span>
-                Log out
-                <span class="material-icons-outlined ml-auto">keyboard_arrow_right</span>
-            </a>
-        </div>
-    </aside>
-    {{-- LEFT MENU --}}
 
 
 
