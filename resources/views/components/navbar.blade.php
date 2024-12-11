@@ -9,7 +9,7 @@
         <div class="top-0 left-0 items-start hidden w-full h-full p-4 text-sm bg-gray-900 bg-opacity-50 md:items-center md:w-3/4 md:absolute lg:text-base md:bg-transparent md:p-0 md:relative md:flex"
             :class="{ 'flex fixed': showMenu, 'hidden': !showMenu }">
             <div
-                class="flex-col w-full h-auto overflow-hidden bg-white rounded-lg md:bg-transparent md:overflow-visible md:rounded-none md:relative md:flex md:flex-row">
+                class="flex-col w-full h-auto bg-white rounded-lg md:bg-transparent md:overflow-visible md:rounded-none md:relative md:flex md:flex-row">
                 <a href="#_"
                     class="inline-flex items-center block w-auto h-16 px-6 text-xl font-black leading-none text-gray-900 md:hidden">
                     <img src="{{ asset('img/KedaiDiens.png') }}" alt="logo" class="h-12 w-auto">
@@ -45,14 +45,40 @@
                         </svg>
                     </a>
                 </div>
-                <div
-                    class="flex flex-col items-start justify-end w-full pt-4 md:items-center md:w-1/3 md:flex-row md:py-0">
-                    <a href="/login" class="w-full px-6 py-2 mr-0 text-gray-700 md:px-3 md:mr-2 lg:mr-3 md:w-auto">Sign
-                        In</a>
-                    <a href="/register"
-                        class="inline-flex items-center w-full px-5 px-6 py-3 text-sm font-medium leading-4 text-white bg-gray-900 md:w-auto md:rounded-full hover:bg-gray-800 focus:outline-none md:focus:ring-2 focus:ring-0 focus:ring-offset-2 focus:ring-gray-800">Sign
-                        Up</a>
-                </div>
+                @auth
+                    <div x-data="{ open: false }" @click.outside="open=false" class="relative text-sm">
+                        <button @click="open=!open" class="bg-white rounded-md shadow-sm cursor-pointer">
+                            <span class="block px-4 py-2">Welcome {{ auth()->user()->name }}</span>
+                        </button>
+                        <ul x-show="open"
+                            class="absolute origin-top-left lg:top-0 sm:bottom-0 w-32 p-4 mt-10 bg-white rounded-md shadow-sm"
+                            x-transition x-cloak>
+                            @auth
+                                @if (auth()->user()->is_admin)
+                                    <li><a href="/dashboard">Dashboard </a></li>
+                                @endif
+                                <div class="h-px my-1 -mx-1 bg-neutral-200"></div>
+                            @endauth
+
+                            <li>
+                                <form action="logout" method="POST">
+                                    @csrf
+                                    <button type="submit">Logout</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                @else
+                    <div
+                        class="flex flex-col items-start justify-end w-full pt-4 md:items-center md:w-1/3 md:flex-row md:py-0">
+                        <a href="/login" class="w-full px-6 py-2 mr-0 text-gray-700 md:px-3 md:mr-2 lg:mr-3 md:w-auto">Sign
+                            In</a>
+                        <a href="/register"
+                            class="inline-flex items-center w-full px-5 px-6 py-3 text-sm font-medium leading-4 text-white bg-gray-900 md:w-auto md:rounded-full hover:bg-gray-800 focus:outline-none md:focus:ring-2 focus:ring-0 focus:ring-offset-2 focus:ring-gray-800">Sign
+                            Up</a>
+                    </div>
+
+                @endauth
             </div>
         </div>
         <div @click="showMenu = !showMenu"
