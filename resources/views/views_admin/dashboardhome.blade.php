@@ -73,7 +73,7 @@
 
 
         <div class="pt-16 max-w-7xl mx-auto flex">
-         
+
 
             <main class="flex-1 p-4">
                 <div class="flex flex-col lg:flex-row gap-4 mb-6">
@@ -96,17 +96,33 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div class="bg-white rounded-xl shadow-lg p-6 h-64 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-slide-up" style="animation-delay: 0.1s">
-                        <h3 class="text-xl font-bold text-indigo-800">Stats Card 1</h3>
+
+                {{-- Comment --}}
+                <x-home-admin.comment-rating> </x-home-admin.comment-rating>
+                    {{-- End COMMENT --}}
+
+
+                    <div class="bg-white rounded-xl shadow-lg p-10 h-64 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-slide-up" style="animation-delay: 0.3s">
+
+
+                        <li
+                         class="w-full text-sm font-semibold text-slate-900 p-6 bg-white border border-slate-900/10 bg-clip-padding shadow-md shadow-slate-900/5 rounded-lg flex flex-col justify-center">
+                     <span class="mb-1 text-teal-400 font-display text-5xl">45K+</span>
+                     visit
+                    </li>
+
                     </div>
-                    <div class="bg-white rounded-xl shadow-lg p-6 h-64 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-slide-up" style="animation-delay: 0.2s">
-                        <h3 class="text-xl font-bold text-indigo-800">Stats Card 2</h3>
-                    </div>
-                    <div class="bg-white rounded-xl shadow-lg p-6 h-64 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-slide-up" style="animation-delay: 0.3s">
-                        <h3 class="text-xl font-bold text-indigo-800">Stats Card 3</h3>
-                    </div>
+
+
+                <div class="bg-white rounded-xl shadow-lg p-10 h-64 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-slide-up" style="animation-delay: 0.3s">
+                    <li
+        class="w-full text-sm font-semibold text-slate-900 p-6 bg-white border border-slate-900/10 bg-clip-padding shadow-md shadow-slate-900/5 rounded-lg flex flex-col justify-center">
+        <span class="mb-1 text-teal-400 font-display text-5xl">78K+</span>
+        views
+    </li>
+
                 </div>
+
             </main>
         </div>
 

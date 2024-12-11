@@ -36,3 +36,5 @@ Route::get('views_admin/crudproduk', fn () => view('views_admin.crudproduk'));
 Route::get('views_admin/produk', fn ()=> view('views_admin.produk'));
 
 Route::get('views_admin/profile', fn ()=> view('views_admin.profile'));
+
+Route::get('views_admin/update-delete', fn ()=> view('views_admin.update-delete'));

@@ -127,10 +127,10 @@
                     </a>
                     <div
                         class="relative z-20 w-full h-auto py-8 text-white bg-purple-500 border-t-0 border-yellow-200 px-7">
-                        <a href="#_"
+                        <a href="/halamanproduct"
                             class="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-purple-500 bg-white">Kedai
                             Diens</a>
-                        <h2 class="mb-5 text-5xl font-bold"><a href="#_">Noodles</a></h2>
+                        <h2 class="mb-5 text-5xl font-bold"><a href="/halamanproduct">Noodles</a></h2>
                         <p class="mb-2 text-lg font-normal text-purple-100 opacity-100">Savor the rich flavors and
                             perfect texture of our premium noodles, crafted to satisfy every craving.</p>
 
@@ -145,7 +145,7 @@
                     </a>
                     <div
                         class="relative z-20 w-full h-auto py-8 text-white bg-blue-400 border-t-0 border-yellow-200 px-7">
-                        <a href="/halamanproduct}#drinks"
+                        <a href="/halamanproduct#drinks"
                             class="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-blue-500 bg-white">Kedai
                             Diens</a>
                         <h2 class="mb-5 text-5xl font-bold"><a href="/halamanproduct#drinks">Drinks</a>
@@ -175,6 +175,8 @@
                     </div>
                 </div>
 
+
+                {{-- Best Seller --}}
                 <div class="grid grid-cols-12 col-span-12 gap-7">
                     <div
                         class="flex flex-col items-start col-span-12 overflow-hidden shadow-sm rounded-xl md:col-span-6 lg:col-span-4">
@@ -192,12 +194,16 @@
                                     Noodles</a></h2>
                             <p class="mt-2 text-sm text-gray-500">Authentic noodles with rich spices from Bangladesh.
                                 Savory, spicy, and full of enticing aromas. Perfect for any time!</p>
-                            <button type="button"
+                            <a href="/halamanproduct"
                                 class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md mt-3 bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none">
                                 Detail Produk
-                            </button>
+                            </a>
                         </div>
                     </div>
+                    {{-- Best Seller --}}
+
+
+
 
                     <div
                         class="flex flex-col items-start col-span-12 overflow-hidden shadow-sm rounded-xl md:col-span-6 lg:col-span-4">

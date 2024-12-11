@@ -25,12 +25,7 @@
                         <img class="w-full h-full object-cover" src="https://cdn.pixabay.com/photo/2020/05/22/17/53/mockup-5206355_960_720.jpg" alt="Product Image">
                     </div>
                     <div class="flex -mx-2 mb-4">
-                        <div class="w-1/2 px-2">
-                            <button class="w-full bg-gray-900 dark:bg-gray-600 text-white py-2 px-4 rounded-full font-bold hover:bg-gray-800 dark:hover:bg-gray-700">Add to Cart</button>
-                        </div>
-                        <div class="w-1/2 px-2">
-                            <button class="w-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white py-2 px-4 rounded-full font-bold hover:bg-gray-300 dark:hover:bg-gray-600">Add to Wishlist</button>
-                        </div>
+
                     </div>
                 </div>
                 <div class="md:flex-1 px-4">
@@ -64,9 +59,9 @@
                     <div class="mb-4">
                         <span class="font-bold text-gray-700 dark:text-black"> Select Buy :</span>
                         <div class="flex items-center mt-2">
-                            <a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{ asset('img/shoppe.png') }}" alt="" width="150" class="py-2 px-4 hover:bg-gray-400"></a>
-                            <a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{ asset('img/grab.png') }}" alt="" width="150" class="py-2 px-4 hover:bg-gray-400"></a>
-                            <a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{ asset('img/wa.png') }}" alt="" width="120 " class="py-2 px-4 hover:bg-gray-400"></a>
+                            <a href="https://shopee.co.id/universal-link/now-food/shop/21694323?deep_and_deferred=1&shareChannel=copy_link" target="_blank" rel="noopener noreferrer"><img src="{{ asset('img/shoppe.png') }}" alt="" width="150" class="py-2 px-4 hover:bg-gray-400"></a>
+                            <a href="https://r.grab.com/g/6-20241211_175759_3d0c41b2-04cd-42d3-80e3-5e448587e125_MEXMPS-6-C6TVDCEVTBMCAX" target="_blank" rel="noopener noreferrer"><img src="{{ asset('img/grab.png') }}" alt="" width="150" class="py-2 px-4 hover:bg-gray-400"></a>
+                            <a href="https://wa.me/6285701756614?text=Halo%20saya%20tertarik%20dengan%20produk%20Anda" target="_blank" rel="noopener noreferrer"><img src="{{ asset('img/wa.png') }}" alt="" width="120 " class="py-2 px-4 hover:bg-gray-400"></a>
                         </div>
                     </div>
                 </div>
