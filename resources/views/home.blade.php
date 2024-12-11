@@ -158,7 +158,7 @@
 
                 <div
                     class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 xl:col-span-4">
-                    <a href="/halamanproduct/halamanproduct#snacks"
+                    <a href="/halamanproduct#snacks"
                         class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110"
                         style="background-image:url('https://cdn.devdojo.com/images/may2021/orange.jpg')">
                     </a>
@@ -174,7 +174,6 @@
 
                     </div>
                 </div>
-
 
                 {{-- Best Seller --}}
                 <div class="grid grid-cols-12 col-span-12 gap-7">
