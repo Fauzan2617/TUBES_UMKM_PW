@@ -82,12 +82,7 @@
 
           <!-- Category -->
           <div class="p-2">
-            <select id="category" name="category" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-[#8c0327] focus:ring-[#8c0327] focus:ring-opacity-50 p-2" style="background-color: #f6f6f6;">
-              <option value="">Select a category product</option>
-              <option>Noodles</option>
-              <option>Drink</option>
-              <option>Snack</option>
-            </select>
+            <input type="text" id="title" name="title" placeholder="kategori" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-[#8c0327] focus:ring-[#8c0327] focus:ring-opacity-50 p-2" style="background-color: #f6f6f6;">
           </div>
 
           <!-- Description and Image Upload -->
@@ -133,7 +128,7 @@
 
 
 
-      
+
 <script>
             // Mobile menu functionality
             const mobileMenuButton = document.querySelector('.mobile-menu-button');
