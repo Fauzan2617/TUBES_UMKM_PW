@@ -37,14 +37,9 @@
                     <x-nav-link href="/about" :active="request()->is('about')">About</x-nav-link>
                     <x-nav-link href="/halamanproduct" :active="request()->is('halamanproduct')">Produk</x-nav-link>
 
-                    <a
-                        href="#_"class="absolute top-0 left-0 hidden py-2 mt-6 ml-10 mr-2 text-gray-600 lg:inline-block md:mt-0 md:ml-2 lg:mx-3 md:relative">
-                        <svg class="inline w-5 h-5" fill="none" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-                            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                    </a>
+                    
                 </div>
+                
                 @auth
                     <div x-data="{ open: false }" @click.outside="open=false" class="relative text-sm">
                         <button @click="open=!open" class="bg-white rounded-md shadow-sm cursor-pointer">

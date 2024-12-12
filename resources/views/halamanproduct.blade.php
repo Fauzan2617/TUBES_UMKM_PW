@@ -38,14 +38,28 @@
                 <x-navbar></x-navbar>
                 <!-- Navbar end -->
 
-
+                {{-- live search --}}
+                <div id="search-bar" class="bg-white rounded-md shadow-lg z-10 mt-5 mx-auto w-full sm:w-11/12 md:w-10/12 lg:w-8/12 xl:w-6/12">
+                    <form class="flex items-center justify-center p-2">
+                        <input 
+                            type="text" 
+                            placeholder="Search here" 
+                            class="w-full rounded-md px-2 py-1 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-transparent">
+                        <button 
+                            type="submit"
+                            class="bg-gray-800 text-white rounded-md px-4 py-1 ml-2 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50">
+                            Search
+                        </button>
+                    </form>
+                </div>
 
 
                 {{-- GARIS PEMBATAS JUDUL NOODLESS --}}
                 <div class="text-center p-10">
+                    <div class="gradient-line"></div>
                     <h1 class="font-bold text-4xl mb-4">Menu Noodles</h1>
                     <h6 class="text-3xl">All Noodles in here</h6>
-                    <div class="gradient-line"></div>
+                    
                 </div>
                 {{-- END GARIS PEMBATAS JUDUL NOODLES --}}
 
@@ -89,9 +103,10 @@
 
                 {{-- GARIS BATAS UNTUK JUDUL MINUMAN --}}
                 <div class="text-center p-10" id="drinks">
+                    <div class="gradient-line"></div>
                     <h1 class="font-bold text-4xl mb-4">Drink Menu</h1>
                     <h6 class="text-3xl">All Drink in here</h6>
-                    <div class="gradient-line"></div>
+                    
                 </div>
                 {{-- END GARIS BATAS UNTUK JUDUL MINUMAN --}}
 
@@ -137,9 +152,10 @@
 
                 {{-- GARIS BATAS UNTUK JUDUL SNACKS --}}
                 <div class="text-center p-10">
+                    <div class="gradient-line"></div>
                     <h1 class="font-bold text-4xl mb-4">Snack Menu</h1>
                     <h6 class="text-3xl">All Snack in here</h6>
-                    <div class="gradient-line"></div>
+                    
                 </div>
                 {{-- END GARIS BATAS UNTUK JUDUL SNACKS --}}
 
