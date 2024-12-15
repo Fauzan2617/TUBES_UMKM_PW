@@ -37,20 +37,22 @@
                     <x-nav-link href="/about" :active="request()->is('about')">About</x-nav-link>
                     <x-nav-link href="/halamanproduct" :active="request()->is('halamanproduct')">Produk</x-nav-link>
 
-                    
+
                 </div>
-                
+
                 @auth
                     <div x-data="{ open: false }" @click.outside="open=false" class="relative text-sm">
                         <button @click="open=!open" class="bg-white rounded-md shadow-sm cursor-pointer">
                             <span class="block px-4 py-2">Welcome {{ auth()->user()->name }}</span>
                         </button>
                         <ul x-show="open"
-                            class="absolute origin-top-left lg:top-0 sm:bottom-0 w-32 p-4 mt-10 bg-white rounded-md shadow-sm"
+                            class="absolute origin-top-left lg:top-0 md:top-0 sm:top-0 sm:bottom-0 w-32 p-4 mt-10 bg-white rounded-md shadow-sm"
                             x-transition x-cloak>
                             @auth
                                 @if (auth()->user()->is_admin)
-                                    <li><a href="/dashboard">Dashboard </a></li>
+                                    <li><a href="/home">Home</a></li>
+                                    <div class="h-px my-1 -mx-1 bg-neutral-200"></div>
+                                    <li><a href="/views_admin/dashboardhome">Dashboard </a></li>
                                 @endif
                                 <div class="h-px my-1 -mx-1 bg-neutral-200"></div>
                             @endauth
