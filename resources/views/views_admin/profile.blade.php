@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Profile Admin</title>
-    <link rel="icon" href="{{ asset ('img/KedaiDiens.png') }}" type="image/png" sizes="512x512">
+    <link rel="icon" href="{{ asset('img/KedaiDiens.png') }}" type="image/png" sizes="512x512">
+
     {{-- font aws --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
         integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
@@ -17,99 +19,88 @@
     <script src="https://cdn.tailwindcss.com"></script>
     {{-- END PINES  --}}
 
-
-
-
+    <!-- Additional styles from template -->
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
+    <link rel="stylesheet"
+        href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
 </head>
-<body>
+
+
+<body class="bg-indigo-50 min-h-screen overflow-x-hidden">
+    <div class="overlay fixed inset-0 bg-indigo-900/50 z-40 hidden opacity-0 transition-opacity duration-300"></div>
 
     {{-- navbar --}}
     <x-produk-admin.navbar-admin></x-produk-admin.navbar-admin>
     {{-- End Navbar --}}
 
-    <section class="w-full overflow-hidden dark:bg-gray-900">
-        <div class="w-full mx-auto">
-            <!-- User Cover IMAGE -->
-            <img src="https://images.unsplash.com/photo-1560697529-7236591c0066?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxMHx8Y292ZXJ8ZW58MHwwfHx8MTcxMDQ4MTEwNnww&ixlib=rb-4.0.3&q=80&w=1080" alt="User Cover"
-                    class="w-full xl:h-[20rem] lg:h-[22rem] md:h-[16rem] sm:h-[13rem] xs:h-[9.5rem]" />
-
-            <!-- User Profile Image -->
-            <div class="w-full mx-auto flex justify-center">
-                <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxMnx8cGVvcGxlfGVufDB8MHx8fDE3MTA0ODExOTN8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="User Profile"
-                        class="rounded-full object-cover xl:w-[16rem] xl:h-[16rem] lg:w-[16rem] lg:h-[16rem] md:w-[12rem] md:h-[12rem] sm:w-[10rem] sm:h-[10rem] xs:w-[8rem] xs:h-[8rem] outline outline-2 outline-offset-2 outline-yellow-500 shadow-xl relative xl:bottom-[7rem] lg:bottom-[8rem] md:bottom-[6rem] sm:bottom-[5rem] xs:bottom-[4.3rem]" />
-            </div>
-
-            <div
-                class="xl:w-[80%] lg:w-[90%] md:w-[94%] sm:w-[96%] xs:w-[92%] mx-auto flex flex-col gap-4 justify-center items-center relative xl:-top-[6rem] lg:-top-[6rem] md:-top-[4rem] sm:-top-[3rem] xs:-top-[2.2rem]">
-                <!-- FullName -->
-                <h1 class="text-center text-gray-800 dark:text-white text-4xl font-serif">Samuel Abera</h1>
-                <!-- About -->
-                <p class="w-full text-gray-700 dark:text-gray-400 text-md text-pretty sm:text-center xs:text-justify">Lorem, ipsum dolor sit amet
-                    consectetur adipisicing elit. Quisquam debitis labore consectetur voluptatibus mollitia dolorem
-                    veniam omnis ut quibusdam minima sapiente repellendus asperiores explicabo, eligendi odit, dolore
-                    similique fugiat dolor, doloremque eveniet. Odit, consequatur. Ratione voluptate exercitationem hic
-                    eligendi vitae animi nam in, est earum culpa illum aliquam. Atque aperiam et voluptatum voluptate
-                    distinctio, nostrum hic voluptatibus nisi. Eligendi voluptatibus numquam maxime voluptatem labore
-                    similique qui illo est magnam adipisci autem quisquam, quia incidunt excepturi, possimus odit
-                    praesentium?</p>
-
-                <!-- Social Links -->
-                <div
-                    class="px-2 flex rounded-sm bg-gray-200 text-gray-500 dark:bg-gray-700 dark:bg-opacity-30 dark:text-gray-700 hover:text-gray-600 hover:dark:text-gray-400">
-                    <a href="https://www.linkedin.com/in/samuel-abera-6593a2209/">
-                        <div data-title="LinkedIn" class="p-2 hover:text-primary hover:dark:text-primary">
-                            <svg class="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path fill-rule="evenodd"
-                                    d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z"
-                                    clip-rule="evenodd" />
-                                <path d="M7.2 8.809H4V19.5h3.2V8.809Z" />
-                            </svg>
-
-                        </div>
-                    </a>
-                    <a href="https://twitter.com/Samuel7Abera7">
-                        <div data-title="X" class="p-2 hover:text-primary hover:dark:text-primary">
-                            <svg class="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z" />
-                            </svg>
-
-                        </div>
-                    </a>
-                    <a href="">
-                        <div data-title="Facebook" class="p-2 hover:text-blue-500 hover:dark:text-blue-500">
-                            <svg class="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path fill-rule="evenodd"
-                                    d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-
-                        </div>
-                    </a>
-                    <a href="https://www.youtube.com/@silentcoder7">
-                        <div data-title="Youtube" class="p-2 hover:text-primary hover:dark:text-primary">
-                            <svg class="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path fill-rule="evenodd"
-                                    d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                    </a>
-                </div>
-
-                
-            </div>
+    <!-- Profile Section -->
+    <section class="relative block h-500-px">
+        <div class="absolute top-0 w-full h-full bg-center bg-cover"
+            style="
+                    background-image: url('https://png.pngtree.com/background/20230519/original/pngtree-an-old-coffee-shop-with-very-dark-walls-picture-image_2652909.jpg">
+            <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span>
         </div>
     </section>
 
+    <section class="relative py-1 bg-blueGray-200">
+        <div class="container mx-auto px-4">
+            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
+                <div class="px-6">
+                    <div class="flex flex-wrap justify-center">
+                        <div class="w-full lg:w-2/12 px-4 lg:order-2 flex justify-center">
+                            <div class="relative">
+                                <div
+                                    class="h-48 w-48 rounded-full overflow-hidden absolute -m-16 -ml-20 lg:-ml-16 outline">
+                                    <img alt="Profile Picture"
+                                        src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/222/2024/08/18/WhatsApp-Image-2024-08-17-at-140220-4284981413.jpeg"
+                                        class="h-full w-full object-cover">
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="w-full lg-4 px-4 lg:order-2 lg:text-right lg:self-center">
+                            <div class="py-6 px-3 mt-32 sm:mt-0">
+                                <button
+                                    class="bg-blue-500 active:bg-black uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150"
+                                    type="button">
+                                    Edit Profile
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-12">
+                        <h3 class="text-4xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
+                            Ambalabu
+                        </h3>
+                        <div class="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
+                            <i class="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"></i>
+                            Bandung, Jawa Barat
+                        </div>
+                        <div class="mb-2 text-blueGray-600 mt-10">
+                            <i class="fas fa-briefcase mr-2 text-lg text-blueGray-400"></i>08123456789
+                        </div>
+                        <div class="mb-2 text-blueGray-600">
+                            <i class="fas fa-university mr-2 text-lg text-blueGray-400"></i>Ambalabu@gmail.com
+                        </div>
+                    </div>
+                    <div class="mt-10 py-10 border-t border-blueGray-200 text-center">
+                        <div class="flex flex-wrap justify-center">
+                            <div class="w-full lg:w-9/12 px-4">
+                                <p class="mb-4 text-lg leading-relaxed text-blueGray-700">
+                                    An artist of considerable range, Jenna the name taken by
+                                    Melbourne-raised, Brooklyn-based Nick Murphy writes,
+                                    performs and records all of his own music, giving it a
+                                    warm, intimate feel with a solid groove structure. An
+                                    artist of considerable range.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>
