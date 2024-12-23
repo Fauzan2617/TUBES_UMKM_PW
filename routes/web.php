@@ -59,3 +59,13 @@ Route::put('views_admin/produk/{id}', [ProductController::class, 'update'])->nam
 
 // Route untuk delete produk
 Route::delete('views_admin/produk/{id}', [ProductController::class, 'destroy'])->name('produk.destroy');
+
+// Komen User
+Route::get('/about', [\App\Http\Controllers\CommentController::class,'index'])->name('about');
+
+Route::get('views_admin/dashboardhome', [App\Http\Controllers\CommentController::class, 'index_comment'])->name('views_admin.dashboardhome');
+
+
+Route::post('/about', [App\Http\Controllers\CommentController::class, 'store'])->name('about.comment');
+
+Route::post('views_admin/dashboardhome', [App\Http\Controllers\CommentController::class, 'store_comment'])->name('about.comments');

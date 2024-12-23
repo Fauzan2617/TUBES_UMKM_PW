@@ -114,7 +114,7 @@
                                 tentang kehangatan, kenikmatan, dan keunikan yang akan membuat Anda kembali lagi.
 
                                 Selamat menikmati!</p>
-                            <div class="mt-10 flex items-center justify-center gap-x-6">
+                            <div class="mt-10 flex items-center justify-center gap-x-6 py-5">
                                 <a href="/home"
                                     class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get
                                     started</a>
@@ -122,22 +122,83 @@
                                     class="text-sm/6 font-semibold text-gray-900">Our Product<span
                                         aria-hidden="true">→</span></a>
                             </div>
-                            <div class=" mt-10 flex items-center justify-center gap-x-6">
-                                <div
-                                    class="flex items-center justify-center col-span-6 sm:col-span-4 md:col-span-3 xl:col-span-2">
-                                    <a href="#"><img src="{{ asset('img/instagram.png') }}" alt=""
-                                            class="block object-contain h-12 xl:px-2 md:w-auto" /></a>
-                                    <img src="{{ asset('img/wa.png') }}" alt=""
-                                        class="block object-contain h-12 xl:px-2" />
-                                    <img src="{{ asset('img/shopeenew.jpg') }}" alt=""
-                                        class="block object-contain h-12 xl:px-2" />
-                                    <img src="{{ asset('img/grabnew.jpg') }}" alt=""
-                                        class="block object-contain h-12 xl:px-2" />
-                                </div>
-                            </div>
+                                    <!-- End Main Hero Content -->
+
+
+
+
+
+
+                                      {{-- COMMENT --}}
+                             <div class="border border-gray-300 p-3 rounded-lg max-w-xl">
+
+                                    {{-- COMMENT ALL PEOPLE --}}
+                                    <section class="bg-white px-4 py-12 md:py-24">
+                                        <div class="max-w-screen-xl mx-auto">
+                                        <h2 class="font-black text-black text-center text-3xl leading-none uppercase max-w-2xl mx-auto mb-12">What Listeners
+                                            Are Saying</h2>
+                                        <div class="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4 relative">
+                                            <div class="bg-gray-200 rounded-lg p-8 text-center md:w-1/3">
+                                            <p class="font-bold uppercase">John Doe</p>
+                                            <p class="text-xl font-light italic text-gray-700">This podcast is amazing! The storytelling and production
+                                                quality are top-notch. I can't wait for the next episode!</p>
+                                            </div>
+                                            <div class="bg-gray-200 rounded-lg p-8 text-center md:w-1/3">
+                                            <p class="font-bold uppercase">Jane Smith</p>
+                                            <p class="text-xl font-light italic text-gray-700">This podcast kept me on the edge of my seat. It's a
+                                                must-listen for true crime enthusiasts!</p>
+                                            </div>
+                                            <div class="bg-gray-200 rounded-lg p-8 text-center md:w-1/3">
+                                            <p class="font-bold uppercase">Emily Johnson</p>
+                                            <p class="text-xl font-light italic text-gray-700">I can't get enough of this podcast! The host's voice is so
+                                                soothing, and the stories are gripping. Highly recommend!</p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </section>
+                                    {{-- END COMMENT ALL PEOPLE --}}
+
+
+
+
+
+
+                                        <h2 class="text-lg font-medium mb-2">Leave a comment</h2>
+
+                                        <form action="{{ route('about.comment') }}" method="POST">
+                                            @csrf
+                                            <div class="mb-4">
+                                                <label class="block text-gray-700 font-medium mb-2" for="name">
+                                                    Name
+                                                </label>
+                                                <input
+                                                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-gray-500"
+                                                    id="name" name="name" type="text" placeholder="Enter your name" required>
+                                            </div>
+                                            <div class="mb-4">
+                                                <label class="block text-gray-700 font-medium mb-2" for="comment">
+                                                    Comment
+                                                </label>
+                                                <textarea rows="4"
+                                                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-gray-500"
+                                                    id="comment" name="comment" placeholder="Enter your comment" required></textarea>
+                                            </div>
+                                            <div class="flex justify-end">
+                                                <button
+                                                    class="bg-blue-500 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                                    type="submit">Post Comment</button>
+                                            </div>
+                                        </form>
+
+                                    </div>
+
+
+
+
                         </div>
+
                     </div>
-                    <!-- End Main Hero Content -->
+
 
                 </div>
         </section>
