@@ -2,63 +2,47 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
+use App\Models\ProductType;
 use Illuminate\Http\Request;
+use App\Http\Controllers\crudproduk;
 
 class ProductController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        $productTypes = ProductType::all(); // Ambil data product_types
+        return view('views_admin.crudproduk', compact('productTypes'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+    // Simpan data ke database
     public function store(Request $request)
     {
-        //
-    }
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'image' => 'nullable|image|max:2048',
+            'brand' => 'nullable|string|max:255',
+            'price' => 'required|numeric|min:0',
+            'description' => 'nullable|string',
+            'product_type_id' => 'required|exists:product_types,id',
+        ]);
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
+        // Upload gambar jika ada
+        $imagePath = null;
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('img/products', 'public');
+        }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
+        // Simpan data ke database
+        Product::create([
+            'name' => $request->name,
+            'image' => $imagePath,
+            'brand' => $request->brand,
+            'price' => $request->price,
+            'description' => $request->description,
+            'product_type_id' => $request->product_type_id,
+        ]);
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        return redirect()->route('views_admin.produk')->with('success', 'Produk berhasil ditambahkan');
     }
 }
