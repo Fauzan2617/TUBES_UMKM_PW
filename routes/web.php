@@ -26,6 +26,9 @@ Route::get('/halamanproduct', [\App\Http\Controllers\halamanproduct::class,'inde
 
 Route::get('/detailproduct', [\App\Http\Controllers\detailproduct::class,'index']);
 
+//crud show user
+Route::get('halamanproduct', [ProductController::class, 'index_user'])->name('halamanproduct');
+
 
 
 // Bagian Admin
@@ -44,3 +47,6 @@ Route::get('views_admin/update-delete', [\App\Http\Controllers\update_delete::cl
 Route::get('views_admin/crudproduk', [ProductController::class, 'create'])->name('views_admin.crudproduk');
 
 Route::post('views_admin/crudproduk', [ProductController::class, 'store'])->name('views_admin.produk');
+
+//crud show admin
+Route::get('views_admin/produk', [ProductController::class, 'index'])->name('views_admin.produk');
