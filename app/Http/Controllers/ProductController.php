@@ -60,4 +60,55 @@ class ProductController extends Controller
         $products = Product::with('ProductType')->get();
         return view('halamanproduct', compact('products'));
     }
+
+    public function edit($id)
+    {
+        // Cari produk berdasarkan ID
+        $product = Product::findOrFail($id);
+        $productTypes = ProductType::all(); // Jika kategori produk dibutuhkan
+
+        // Kirim data produk ke halaman edit
+        return view('views_admin.editproduk', compact('product', 'productTypes'));
+    }
+
+    // Memperbarui post berdasarkan ID
+    public function update(Request $request, $id)
+    {
+        // Validasi input sesuai dengan struktur tabel products
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'image' => 'nullable|image|mimes:jpg,png,jpeg|max:2048', // Validasi file gambar
+            'brand' => 'nullable|string|max:255',
+            'price' => 'required|numeric|min:0', // Harga harus angka positif
+            'description' => 'nullable|string',
+            'product_type_id' => 'required|exists:product_types,id', // Pastikan ID kategori valid
+        ]);
+
+        // Cari produk berdasarkan ID
+        $update_produk = Product::findOrFail($id);
+
+        // Update data produk
+        $update_produk->name = $validated['name'];
+        $update_produk->brand = $validated['brand'];
+        $update_produk->price = $validated['price'];
+        $update_produk->description = $validated['description'];
+        $update_produk->product_type_id = $validated['product_type_id'];
+
+        // Jika ada file gambar yang di-upload
+        if ($request->hasFile('image')) {
+            // Ambil nama asli file gambar
+            $originalName = $request->file('image')->getClientOriginalName();
+
+            // Simpan gambar dengan nama aslinya di folder 'images/products'
+            $path = $request->file('image')->storeAs('images/products', $originalName, 'public');
+
+            // Simpan path gambar ke dalam database
+            $update_produk->image = 'images/products/' . $originalName;
+        }
+
+
+        $update_produk->save(); // Simpan perubahan ke database
+
+        return redirect()->route('views_admin.produk')->with('success', 'Produk berhasil diupdate');
+    }
 }

@@ -136,7 +136,7 @@
                 @if ($product->product_type_id == 1)
                     <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
                         <!-- Tambahkan link ke halaman edit -->
-                        <a href="">
+                        <a href="{{ route('views_admin.editproduk', $product->id) }}">
                             <!-- Gambar Produk -->
                             <img src="{{ $product->image ? asset('storage/images/products/' . $product->image) : 'https://via.placeholder.com/300' }}"
                                 alt="{{ $product->name }}" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -212,7 +212,7 @@
                 @if ($product->product_type_id == 2)
                     <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
                         <!-- Tambahkan link ke halaman edit -->
-                        <a href="">
+                        <a href="{{ route('views_admin.editproduk', $product->id) }}">
                             <!-- Gambar Produk -->
                             <img src="{{ $product->image ? asset('storage/images/products/' . $product->image) : 'https://via.placeholder.com/300' }}"
                                 alt="{{ $product->name }}" class="h-80 w-72 object-cover rounded-t-xl" />
@@ -288,7 +288,7 @@
                 @if ($product->product_type_id == 3)
                     <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
                         <!-- Tambahkan link ke halaman edit -->
-                        <a href="">
+                        <a href="{{ route('views_admin.editproduk', $product->id) }}">
                             <!-- Gambar Produk -->
                             <img src="{{ $product->image ? asset('storage/images/products/' . $product->image) : 'https://via.placeholder.com/300' }}"
                                 alt="{{ $product->name }}" class="h-80 w-72 object-cover rounded-t-xl" />
