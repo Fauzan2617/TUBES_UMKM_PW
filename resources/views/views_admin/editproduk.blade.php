@@ -81,7 +81,7 @@
         </form>
 
         <!-- Form Delete -->
-        <form action="" method="POST" class="mt-4">
+        <form action="{{ route('produk.destroy', $product->id) }}" method="POST" class="mt-4">
             @csrf
             @method('DELETE')
             <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white py-3 px-4 rounded-full">
