@@ -45,4 +45,19 @@ class ProductController extends Controller
 
         return redirect()->route('views_admin.produk')->with('success', 'Produk berhasil ditambahkan');
     }
+
+    // Tampilkan data untuk admin
+    public function index()
+    {
+        $products = Product::with('ProductType')->get();
+        return view('views_admin.produk', compact('products'));
+    }
+
+
+    // Tampilkan data untuk user
+    public function index_user()
+    {
+        $products = Product::with('ProductType')->get();
+        return view('halamanproduct', compact('products'));
+    }
 }
