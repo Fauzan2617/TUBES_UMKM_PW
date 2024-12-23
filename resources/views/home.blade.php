@@ -205,30 +205,29 @@
             <h2 class="text-xl md:text-7xl font-semibold mb-5">We Location 📍</h2>
             <form class="space-y-4" name="contact_form" id="myform">
                 <div>
-                    <input type="text" id="fullName" name="nama" placeholder='Full Name'
-                        class="mt-1 p-4 w-full border rounded-md" />
+                    <input type="text" id="fullName" name="nama" placeholder="Full Name"
+                        class="mt-1 p-4 w-full border rounded-md" required />
                 </div>
                 <div>
-                    <input type="email" id="email" name="email" placeholder='Email'
-                        class="mt-1 p-4 w-full border rounded-md" />
+                    <input type="email" id="email" name="email" placeholder="Email"
+                        class="mt-1 p-4 w-full border rounded-md" required />
                 </div>
                 <div>
-                    <textarea id="message" name="pesan" placeholder='Message' class="mt-1 p-4 w-full border rounded-md"
-                        rows="4"></textarea>
+                    <textarea id="message" name="pesan" placeholder="Message" class="mt-1 p-4 w-full border rounded-md"
+                        rows="4" required></textarea>
                 </div>
                 <!-- Tombol Submit -->
-    <button id="submitButton" type="submit" class="btn-kirim px-8 py-4 bg-blue-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white rounded-lg">
-        Submit
-    </button>
-
-    <!-- Tombol Loading -->
-    <button id="loadingButton" type="button" class="hidden px-8 py-4 flex justify-center items-center bg-gray-500 text-white rounded-lg">
-        <svg width="20" height="20" fill="currentColor" class="mr-2 animate-spin" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-            <path d="M526 1394q0 53-37.5 90.5t-90.5 37.5q-52 0-90-38t-38-90q0-53 37.5-90.5t90.5-37.5 90.5 37.5 37.5 90.5zm498 206q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-704-704q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm1202 498q0 52-38 90t-90 38q-53 0-90.5-37.5t-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-964-996q0 66-47 113t-113 47-113-47-47-113 47-113 113-47 113 47 47 113zm1170 498q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-640-704q0 80-56 136t-136 56-136-56-56-136 56-136 136-56 136 56 56 136zm530 206q0 93-66 158.5t-158 65.5q-93 0-158.5-65.5t-65.5-158.5q0-92 65.5-158t158.5-66q92 0 158 66t66 158z"></path>
-        </svg>
-        Loading...
-    </button>
-
+                <button type="submit" class="btn-kirim px-8 py-4 bg-blue-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white rounded-lg">
+                    Submit
+                </button>
+            
+                <!-- Tombol Loading -->
+                <button type="button" class="btn-loading hidden px-8 py-4 flex justify-center items-center bg-gray-500 text-white rounded-lg">
+                    <svg width="20" height="20" fill="currentColor" class="mr-2 animate-spin" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M526 1394q0 53-37.5 90.5t-90.5 37.5q-52 0-90-38t-38-90q0-53 37.5-90.5t90.5-37.5 90.5 37.5 37.5 90.5zm498 206q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-704-704q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm1202 498q0 52-38 90t-90 38q-53 0-90.5-37.5t-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-964-996q0 66-47 113t-113 47-113-47-47-113 47-113 113-47 113 47 47 113zm1170 498q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-640-704q0 80-56 136t-136 56-136-56-56-136 56-136 136-56 136 56 56 136zm530 206q0 93-66 158.5t-158 65.5q-93 0-158.5-65.5t-65.5-158.5q0-92 65.5-158t158.5-66q92 0 158 66t66 158z"></path>
+                    </svg>
+                    Loading...
+                </button>
             </form>
 
         </div>
@@ -290,46 +289,35 @@
 
     <script src="{{ asset('js/script.js') }}"></script>
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxLx0jffrw-FYIuPf9gFhRqX0SmtEMDKR-VZLMfC-opreVkjz1Z0CLcw06mZTR4tU_N1w/exec';
-        const form = document.forms["contact_form"];
-        const submitButton = document.querySelector('.btn-kirim'); // Tombol submit
-        const loadingButton = document.createElement('button'); // Tombol loading
+       const scriptURL = 'https://script.google.com/macros/s/AKfycbxLx0jffrw-FYIuPf9gFhRqX0SmtEMDKR-VZLMfC-opreVkjz1Z0CLcw06mZTR4tU_N1w/exec';
+const form = document.forms['contact_form'];
+const submitButton = document.querySelector('.btn-kirim');
+const loadingButton = document.querySelector('.btn-loading');
 
-        // Buat tombol loading
-        loadingButton.setAttribute('type', 'button');
-        loadingButton.className = 'hidden px-8 py-4 flex justify-center items-center bg-gray-500 text-white rounded-lg';
-        loadingButton.innerHTML = `
-            <svg width="20" height="20" fill="currentColor" class="mr-2 animate-spin" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-                <path d="M526 1394q0 53-37.5 90.5t-90.5 37.5q-52 0-90-38t-38-90q0-53 37.5-90.5t90.5-37.5 90.5 37.5 37.5 90.5zm498 206q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-704-704q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm1202 498q0 52-38 90t-90 38q-53 0-90.5-37.5t-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-964-996q0 66-47 113t-113 47-113-47-47-113 47-113 113-47 113 47 47 113zm1170 498q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-640-704q0 80-56 136t-136 56-136-56-56-136 56-136 136-56 136 56 56 136zm530 206q0 93-66 158.5t-158 65.5q-93 0-158.5-65.5t-65.5-158.5q0-92 65.5-158t158.5-66q92 0 158 66t66 158z"></path>
-            </svg>
-            Loading...
-        `;
-        form.parentElement.appendChild(loadingButton); // Tambahkan tombol loading ke dalam DOM
+form.addEventListener('submit', e => {
+    e.preventDefault(); // Mencegah reload halaman
 
-        form.addEventListener('submit', e => {
-            e.preventDefault(); // Mencegah reload halaman
+    // Sembunyikan tombol submit dan tampilkan tombol loading
+    submitButton.classList.add('hidden');
+    loadingButton.classList.remove('hidden');
 
-            // Sembunyikan tombol submit dan tampilkan tombol loading
-            submitButton.classList.add('hidden');
-            loadingButton.classList.remove('hidden');
-
-            // Kirim data ke Google Apps Script
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    console.log('Success!', response); // Menampilkan pesan sukses di console
-                    alert('Data berhasil dikirim!'); // Menampilkan notifikasi sukses
-                    form.reset(); // Mereset form setelah sukses
-                })
-                .catch(error => {
-                    console.error('Error!', error.message); // Menampilkan error di console
-                    alert('Terjadi kesalahan: ' + error.message); // Menampilkan notifikasi error
-                })git 
-                .finally(() => {
-                    // Kembalikan tombol submit dan sembunyikan tombol loading
-                    submitButton.classList.remove('hidden');
-                    loadingButton.classList.add('hidden');
-                });
+    // Kirim data ke Google Apps Script
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            console.log('Success!', response); // Log sukses di console
+            alert('Data berhasil dikirim!'); // Menampilkan pesan sukses
+            form.reset(); // Reset form setelah pengiriman
+        })
+        .catch(error => {
+            console.error('Error!', error.message); // Log error di console
+            alert('Terjadi kesalahan: ' + error.message); // Pesan kesalahan
+        })
+        .finally(() => {
+            // Kembalikan tombol submit dan sembunyikan tombol loading
+            submitButton.classList.remove('hidden');
+            loadingButton.classList.add('hidden');
         });
+});
     </script>
 
 
