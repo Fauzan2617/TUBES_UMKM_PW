@@ -56,3 +56,6 @@ Route::get('views_admin/editproduk/{id}', [ProductController::class, 'edit'])->n
 
 // Route untuk menyimpan hasil update
 Route::put('views_admin/produk/{id}', [ProductController::class, 'update'])->name('produk.update');
+
+// Route untuk delete produk
+Route::delete('views_admin/produk/{id}', [ProductController::class, 'destroy'])->name('produk.destroy');

@@ -111,4 +111,13 @@ class ProductController extends Controller
 
         return redirect()->route('views_admin.produk')->with('success', 'Produk berhasil diupdate');
     }
+
+    // Menghapus post berdasarkan ID
+    public function destroy($id)
+    {
+        $hapus_produk = Product::findOrFail($id);
+        $hapus_produk->delete();
+
+        return redirect()->route('views_admin.produk')->with('success', 'Produk berhasil dihapus');
+    }
 }
