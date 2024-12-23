@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 
 Route::get('/', [\App\Http\Controllers\home::class,'index']);
@@ -37,3 +38,9 @@ Route::get('views_admin/produk', [\App\Http\Controllers\produk::class,'index']);
 Route::get('views_admin/profile', [\App\Http\Controllers\profile_admin::class,'index']);
 
 Route::get('views_admin/update-delete', [\App\Http\Controllers\update_delete::class,'index']);
+
+
+// sistem crud / admin
+Route::get('views_admin/crudproduk', [ProductController::class, 'create'])->name('views_admin.crudproduk');
+
+Route::post('views_admin/crudproduk', [ProductController::class, 'store'])->name('views_admin.produk');
