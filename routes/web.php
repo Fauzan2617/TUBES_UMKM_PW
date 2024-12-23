@@ -50,3 +50,9 @@ Route::post('views_admin/crudproduk', [ProductController::class, 'store'])->name
 
 //crud show admin
 Route::get('views_admin/produk', [ProductController::class, 'index'])->name('views_admin.produk');
+
+// Route untuk menampilkan form edit produk
+Route::get('views_admin/editproduk/{id}', [ProductController::class, 'edit'])->name('views_admin.editproduk');
+
+// Route untuk menyimpan hasil update
+Route::put('views_admin/produk/{id}', [ProductController::class, 'update'])->name('produk.update');
