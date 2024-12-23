@@ -18,6 +18,10 @@
     <script src="https://unpkg.com/alpinejs" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     {{-- END PINES  --}}
+    <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
+
+
+
     <style>
         .padding {
             padding-bottom: 20px;
@@ -47,6 +51,10 @@
                 }
             }
 
+            antarmuka {
+                display: none;
+            }
+
         }
     </style>
 </head>
@@ -67,7 +75,7 @@
 
 
                 <!-- Main Hero Content -->
-                <div class="relative isolate px-6 pt-14 lg:px-8">
+                <div class="relative isolate px-6 pt-20 lg:px-8">
                     <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
                         aria-hidden="true">
                         <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#d66c7a] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
@@ -113,156 +121,91 @@
     {{-- MENU MENU MAKANAN DAN MINUMAN --}}
     <section class="relative w-full bg-white">
         <div class="absolute w-full h-32 bg-gradient-to-b from-gray-100 to-white"></div>
-        <div class="relative w-full px-5 py-10 mx-auto sm:py-12 md:py-16 md:px-10 max-w-7xl">
+        <div class="relative w-full px-3 sm:px-3 md:px-8 py-10 sm:py-12 md:py-16 mx-auto max-w-7xl">
+            <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 text-center sm:text-left">
+                <a href="#_">Noodles, Drink And Snack</a>
+            </h1>
+            <p class="mt-2 text-sm sm:text-base lg:text-lg text-gray-500 text-center sm:text-left">All Variant Noodles In Here</p>
 
-            <h1 class="mb-1 text-4xl font-extrabold leading-none text-gray-900 lg:text-5xl xl:text-6xl sm:mb-3"><a
-                    href="#_">Noodles,Drink And Snack</a></h1>
-            <p class="text-lg font-medium text-gray-500 sm:text-2xl">All Variant Noodles In Here</p>
-            <div class="flex grid h-full grid-cols-12 gap-10 pb-10 mt-8 sm:mt-16">
-                <div
-                    class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 xl:col-span-4">
-                    <a href="/halamanproduct#noodles"> <img src="{{ asset('img/KedaiDiens.png') }}"
-                            class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110"
-                            alt="">
+
+            <!-- Promosi -->
+            <div class="grid grid-cols-12 col-span-12 gap-6 mt-8">
+                <div class="flex flex-col items-start col-span-12 overflow-hidden shadow-sm rounded-xl xs:col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 xl:col-span-4 ">
+                    <a href="/halamanproduct#noddles1" class="block transition duration-200 ease-out transform hover:scale-110">
+                        <img class="object-cover object-center w-full shadow-sm h-full" src="{{ asset("img/noddle2.jpg") }}">
                     </a>
-                    <div
-                        class="relative z-20 w-full h-auto py-8 text-white bg-purple-500 border-t-0 border-yellow-200 px-7">
-                        <a href="/halamanproduct"
-                            class="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-purple-500 bg-white">Kedai
-                            Diens</a>
-                        <h2 class="mb-5 text-5xl font-bold"><a href="/halamanproduct">Noodles</a></h2>
-                        <p class="mb-2 text-lg font-normal text-purple-100 opacity-100">Savor the rich flavors and
-                            perfect texture of our premium noodles, crafted to satisfy every craving.</p>
-
-                    </div>
-                </div>
-
-                <div
-                    class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 xl:col-span-4">
-                    <a href="/halamanproduct#drinks"
-                        class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110"
-                        style="background-image:url('https://cdn.devdojo.com/images/may2021/orange.jpg')">
-                    </a>
-                    <div
-                        class="relative z-20 w-full h-auto py-8 text-white bg-blue-400 border-t-0 border-yellow-200 px-7">
-                        <a href="/halamanproduct#drinks"
-                            class="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-blue-500 bg-white">Kedai
-                            Diens</a>
-                        <h2 class="mb-5 text-5xl font-bold"><a href="/halamanproduct#drinks">Drinks</a>
+                    <div class="relative flex flex-col items-start px-6 bg-white border border-t-0 border-gray-200 py-7 rounded-b-2xl">
+                        <div class="bg-red-400 absolute top-0 -mt-3 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-full text-xs font-medium uppercase text-white">
+                            <span> Bangladesh Noodles</span>
+                        </div>
+                        <h2 class="text-base font-bold sm:text-lg md:text-xl">
+                            <a href="/halamanproduct#noddles1">Noodles</a>
                         </h2>
-                        <p class="mb-2 text-lg font-normal text-blue-100 opacity-100">Refresh your day with our
-                            flavorful drinks, from fruity delights to creamy indulgences.</p>
-
-                    </div>
-                </div>
-
-                <div
-                    class="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 xl:col-span-4">
-                    <a href="/halamanproduct#snacks"
-                        class="block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-96 hover:scale-110"
-                        style="background-image:url('https://cdn.devdojo.com/images/may2021/orange.jpg')">
+                        <p class="mt-2 text-sm text-gray-500">Authentic noodles with rich spices from Bangladesh. Savory, spicy, and full of enticing aromas. Perfect for any time!</p>
+                        <a href="/halamanproduct#noddles1" class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md mt-3 bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none">
+                        <button type="button" >
+                        Produk
+                        </button>
                     </a>
-                    <div
-                        class="relative z-20 w-full h-auto py-8 text-white bg-blue-400 border-t-0 border-yellow-200 px-7">
-                        <a href="/halamanproduct#snacks"
-                            class="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-blue-500 bg-white">Kedai
-                            Diens</a>
-                        <h2 class="mb-5 text-5xl font-bold"><a href="/halamanproduct#snacks">Snacks</a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-start col-span-12 overflow-hidden shadow-sm rounded-xl xs:col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 xl:col-span-4">
+                    <a href="/halamanproduct#drinks2" class="block transition duration-200 ease-out transform hover:scale-110">
+                        <img class="object-cover object-center w-full shadow-sm h-full" src="{{ asset("img/drink.jpg") }}">
+                    </a>
+                    <div class="relative flex flex-col items-start px-6 bg-white border border-t-0 border-gray-200 py-7 rounded-b-2xl">
+                        <div class="bg-red-400 absolute top-0 -mt-3 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-full text-xs font-medium uppercase text-white">
+                            <span>Mojito Apple</span>
+                        </div>
+                        <h2 class="text-base font-bold sm:text-lg md:text-xl">
+                            <a href="/halamanproduct#drinks2">Drinks</a>
                         </h2>
-                        <p class="mb-2 text-lg font-normal text-blue-100 opacity-100">Enjoy our crispy, savory, and
-                            sweet snacks—perfect for any moment. And Enjoy with Family.</p>
-
+                        <p class="mt-2 text-sm text-gray-500">Traditional Indonesian noodles with bold spices and rich flavors. A perfect blend of savory, spicy, and aromatic goodness!</p>
+                        <a href="/halamanproduct#drinks2" class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md mt-3 bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none">
+                            <button type="button" >
+                            Produk
+                            </button>
+                        </a>
                     </div>
                 </div>
 
-                {{-- Best Seller --}}
-                <div class="grid grid-cols-12 col-span-12 gap-7">
-                    <div
-                        class="flex flex-col items-start col-span-12 overflow-hidden shadow-sm rounded-xl md:col-span-6 lg:col-span-4">
-                        <a href="#_" class="block transition duration-200 ease-out transform hover:scale-110">
-                            <img class="object-cover w-full shadow-sm max-h-56"
-                                src="https://cdn.devdojo.com/images/may2021/workstation.jpg">
-                        </a>
-                        <div
-                            class="relative flex flex-col items-start px-6 bg-white border border-t-0 border-gray-200 py-7 rounded-b-2xl">
-                            <div
-                                class="bg-indigo-400 absolute top-0 -mt-3 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-full text-xs font-medium uppercase text-white inline-block">
-                                <span>Noodles</span>
-                            </div>
-                            <h2 class="text-base font-bold sm:text-lg md:text-xl"><a href="#_">Bangladesh
-                                    Noodles</a></h2>
-                            <p class="mt-2 text-sm text-gray-500">Authentic noodles with rich spices from Bangladesh.
-                                Savory, spicy, and full of enticing aromas. Perfect for any time!</p>
-                            <a href="/halamanproduct"
-                                class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md mt-3 bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none">
-                                Detail Produk
-                            </a>
+                <div class="flex flex-col items-start col-span-12 overflow-hidden shadow-sm rounded-xl xs:col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 xl:col-span-4">
+                    <a href="/halamanproduct#snack3" class="block transition duration-200 ease-out transform hover:scale-110">
+                        <img class="object-cover object-center w-full shadow-sm h-full" src="{{ asset("img/snack2.jpg") }}">
+                    </a>
+                    <div class="relative flex flex-col items-start px-6 bg-white border border-t-0 border-gray-200 py-7 rounded-b-2xl">
+                        <div class="bg-red-400 absolute top-0 -mt-3 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-full text-xs font-medium uppercase text-white">
+                            <span>Sandwich</span>
                         </div>
-                    </div>
-                    {{-- Best Seller --}}
-
-
-
-
-                    <div
-                        class="flex flex-col items-start col-span-12 overflow-hidden shadow-sm rounded-xl md:col-span-6 lg:col-span-4">
-                        <a href="#_" class="block transition duration-200 ease-out transform hover:scale-110">
-                            <img class="object-cover w-full shadow-sm max-h-56"
-                                src="https://cdn.devdojo.com/images/may2021/snacks.jpg">
-                        </a>
-                        <div
-                            class="relative flex flex-col items-start px-6 bg-white border border-t-0 border-gray-200 py-7 rounded-b-2xl">
-                            <div
-                                class="bg-red-400 absolute top-0 -mt-3 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-full text-xs font-medium uppercase text-white inline-block">
-                                <span>Noodles</span>
-                            </div>
-                            <h2 class="text-base font-bold sm:text-lg md:text-xl"><a href="#_">Aceh Noodlesgit
-                                </a></h2>
-                            <p class="mt-2 text-sm text-gray-500">Traditional Indonesian noodles with bold spices and
-                                rich flavors. A perfect blend of savory, spicy, and aromatic goodness!</p>
-                            <button type="button"
-                                class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md mt-3 bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none">
-                                Detail Produk
+                        <h2 class="text-base font-bold sm:text-lg md:text-xl">
+                            <a href="/halamanproduct#snack3">Snack</a>
+                        </h2>
+                        <p class="mt-2 text-sm text-gray-500">A snack is a small portion of food typically consumed between meals. It can be sweet or savory, ranging from chips, cookies, and candies to healthier. </p>
+                        <a href="/detailproduct" class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md mt-3 bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none">
+                            <button type="button" >
+                            Produk
                             </button>
-                        </div>
-                    </div>
-
-                    <div
-                        class="flex flex-col items-start col-span-12 overflow-hidden shadow-sm rounded-xl md:col-span-6 lg:col-span-4">
-                        <a href="#_" class="block transition duration-200 ease-out transform hover:scale-110">
-                            <img class="object-cover w-full shadow-sm max-h-56"
-                                src="https://cdn.devdojo.com/images/may2021/snacks.jpg">
                         </a>
-                        <div
-                            class="relative flex flex-col items-start px-6 bg-white border border-t-0 border-gray-200 py-7 rounded-b-2xl">
-                            <div
-                                class="bg-red-400 absolute top-0 -mt-3 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-full text-xs font-medium uppercase text-white inline-block">
-                                <span>Drink</span>
-                            </div>
-                            <h2 class="text-base font-bold sm:text-lg md:text-xl"><a href="#_">Red Genuine</a>
-                            </h2>
-                            <p class="mt-2 text-sm text-gray-500">A refreshing mix of mint, lime, and sparkling soda.
-                                Perfect to cool you down and brighten your day! And cool in your mounth</p>
-                            <button type="button"
-                                class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md mt-3 bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none">
-                                Detail Produk
-                            </button>
-                        </div>
                     </div>
                 </div>
-
             </div>
+        </div>
+            <!-- end Promosi -->
         </div>
     </section>
     {{-- AKHIR MENU MAKANAN DAN MINUMAN  --}}
+
+
+
 
     {{-- MAPS --}}
     <div class="flex flex-wrap justify-center items-center h-auto p-5 pl-[6%] pt-[9%]">
         <div class="w-full md:w-2/5 p-4">
             <h2 class="text-xl md:text-7xl font-semibold mb-5">We Location 📍</h2>
-            <form class="space-y-4">
+            <form class="space-y-4" name="contact_form" id="myform">
                 <div>
-                    <input type="text" id="fullName" name="fullName" placeholder='Full Name'
+                    <input type="text" id="fullName" name="nama" placeholder='Full Name'
                         class="mt-1 p-4 w-full border rounded-md" />
                 </div>
                 <div>
@@ -270,21 +213,36 @@
                         class="mt-1 p-4 w-full border rounded-md" />
                 </div>
                 <div>
-                    <textarea id="message" name="message" placeholder='Message' class="mt-1 p-4 w-full border rounded-md"
+                    <textarea id="message" name="pesan" placeholder='Message' class="mt-1 p-4 w-full border rounded-md"
                         rows="4"></textarea>
                 </div>
-                <button type="submit" class="px-8 py-4 bg-black text-white hover:bg-blue-700">Submit</button>
+                <!-- Tombol Submit -->
+    <button id="submitButton" type="submit" class="btn-kirim px-8 py-4 bg-blue-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white rounded-lg">
+        Submit
+    </button>
+
+    <!-- Tombol Loading -->
+    <button id="loadingButton" type="button" class="hidden px-8 py-4 flex justify-center items-center bg-gray-500 text-white rounded-lg">
+        <svg width="20" height="20" fill="currentColor" class="mr-2 animate-spin" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <path d="M526 1394q0 53-37.5 90.5t-90.5 37.5q-52 0-90-38t-38-90q0-53 37.5-90.5t90.5-37.5 90.5 37.5 37.5 90.5zm498 206q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-704-704q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm1202 498q0 52-38 90t-90 38q-53 0-90.5-37.5t-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-964-996q0 66-47 113t-113 47-113-47-47-113 47-113 113-47 113 47 47 113zm1170 498q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-640-704q0 80-56 136t-136 56-136-56-56-136 56-136 136-56 136 56 56 136zm530 206q0 93-66 158.5t-158 65.5q-93 0-158.5-65.5t-65.5-158.5q0-92 65.5-158t158.5-66q92 0 158 66t66 158z"></path>
+        </svg>
+        Loading...
+    </button>
+
             </form>
+
         </div>
-        <div class="w-full md:w-1/2 p-4 flex justify-center">
-            <div class="rounded-full overflow-hidden w-[35rem] h-[35rem]">
-                <iframe class="w-[35rem] h-[35rem]"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.7613778346804!2d107.56109567483539!3d-6.919105493080502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e52b14079f63%3A0x4415d90d080d6829!2sKEDAI%20DIEN&#39;S!5e0!3m2!1sid!2sid!4v1733150776172!5m2!1sid!2sid"
-                    allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        <div class="w-full md:w-1/2 p-4 flex justify-center ">
+            <div class="overflow-hidden w-[35rem] h-[37rem] rounded-xl">
+                <div id="osm-map" class="rounded-xl "></div>
             </div>
         </div>
     </div>
     {{-- MAPS --}}
+
+
+
+
 
 
     {{-- Perusahaan kepercayaan --}}
@@ -331,6 +289,83 @@
 
 
     <script src="{{ asset('js/script.js') }}"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxLx0jffrw-FYIuPf9gFhRqX0SmtEMDKR-VZLMfC-opreVkjz1Z0CLcw06mZTR4tU_N1w/exec';
+        const form = document.forms["contact_form"];
+        const submitButton = document.querySelector('.btn-kirim'); // Tombol submit
+        const loadingButton = document.createElement('button'); // Tombol loading
+
+        // Buat tombol loading
+        loadingButton.setAttribute('type', 'button');
+        loadingButton.className = 'hidden px-8 py-4 flex justify-center items-center bg-gray-500 text-white rounded-lg';
+        loadingButton.innerHTML = `
+            <svg width="20" height="20" fill="currentColor" class="mr-2 animate-spin" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                <path d="M526 1394q0 53-37.5 90.5t-90.5 37.5q-52 0-90-38t-38-90q0-53 37.5-90.5t90.5-37.5 90.5 37.5 37.5 90.5zm498 206q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-704-704q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm1202 498q0 52-38 90t-90 38q-53 0-90.5-37.5t-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-964-996q0 66-47 113t-113 47-113-47-47-113 47-113 113-47 113 47 47 113zm1170 498q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-640-704q0 80-56 136t-136 56-136-56-56-136 56-136 136-56 136 56 56 136zm530 206q0 93-66 158.5t-158 65.5q-93 0-158.5-65.5t-65.5-158.5q0-92 65.5-158t158.5-66q92 0 158 66t66 158z"></path>
+            </svg>
+            Loading...
+        `;
+        form.parentElement.appendChild(loadingButton); // Tambahkan tombol loading ke dalam DOM
+
+        form.addEventListener('submit', e => {
+            e.preventDefault(); // Mencegah reload halaman
+
+            // Sembunyikan tombol submit dan tampilkan tombol loading
+            submitButton.classList.add('hidden');
+            loadingButton.classList.remove('hidden');
+
+            // Kirim data ke Google Apps Script
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    console.log('Success!', response); // Menampilkan pesan sukses di console
+                    alert('Data berhasil dikirim!'); // Menampilkan notifikasi sukses
+                    form.reset(); // Mereset form setelah sukses
+                })
+                .catch(error => {
+                    console.error('Error!', error.message); // Menampilkan error di console
+                    alert('Terjadi kesalahan: ' + error.message); // Menampilkan notifikasi error
+                })git 
+                .finally(() => {
+                    // Kembalikan tombol submit dan sembunyikan tombol loading
+                    submitButton.classList.remove('hidden');
+                    loadingButton.classList.add('hidden');
+                });
+        });
+    </script>
+
+
+
+
+
+
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script>
+        // Where you want to render the map.
+var element = document.getElementById('osm-map');
+
+// Height has to be set. You can do this in CSS too.
+element.style = 'height:35rem; width:35rem; ';
+
+// Create Leaflet map on map element.
+var map = L.map(element);
+
+// Add OSM tile layer to the Leaflet map.
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+// Target's GPS coordinates.
+var target = L.latLng('-6.919124025938159', '107.56366832641821');
+
+// Set map's center to target with zoom 14.
+map.setView(target, 14);
+
+// Place a marker on the same location.
+L.marker(target).addTo(map);
+    </script>
+
+
+
+
 </body>
 
 </html>
