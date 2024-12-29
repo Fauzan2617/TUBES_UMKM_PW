@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-<body>
-    <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dashboard Admin</title>
-    {{-- Logo Situs --}}
         <link rel="icon" href="{{ asset ('img/KedaiDiens.png') }}" type="image/png" sizes="512x512">
         <script src="https://unpkg.com/alpinejs" defer></script>
         <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
@@ -90,17 +86,11 @@
                         <h2 class="text-4xl md:text-5xl text-blue-900">
                             Inbox <br><strong>23</strong>
                         </h2>
-                        <a href="#" class="inline-block mt-8 px-8 py-2 rounded-full text-xl font-bold text-white bg-blue-800 hover:bg-blue-900 transition-transform duration-300 hover:scale-105">
+                        <a href="/views_admin/profile" class="inline-block mt-8 px-8 py-2 rounded-full text-xl font-bold text-white bg-blue-800 hover:bg-blue-900 transition-transform duration-300 hover:scale-105">
                             See messages
                         </a>
                     </div>
                 </div>
-
-
-                {{-- Comment --}}
-                <x-home-admin.comment-rating> </x-home-admin.comment-rating>
-                    {{-- End COMMENT --}}
-
 
                     <div class="bg-white rounded-xl shadow-lg p-10 h-64 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl animate-slide-up" style="animation-delay: 0.3s">
 
@@ -123,8 +113,84 @@
 
                 </div>
 
+
+
+
+
+
+
+
             </main>
+
+            <div class="bg-gray-100 p-6">
+                <h2 class="text-lg font-bold mb-10">Comments</h2>
+                <!-- Wrapper scrollable -->
+                <div class="flex flex-col space-y-6 max-h-64 overflow-y-auto border border-gray-300 rounded-lg p-4">
+                    @forelse ($comments as $comment)
+                        <div class="bg-white p-4 rounded-lg shadow-md">
+                            <h3 class="text-lg font-bold">{{ $comment->name }}</h3>
+                            <p class="text-gray-700 text-sm mb-2">Posted on {{ $comment->created_at->format('F d, Y') }}</p>
+                            <p class="text-gray-700">
+                                {{ $comment->comment }}
+                            </p>
+                        </div>
+                    @empty
+                        <p class="text-gray-500">No comments yet. Be the first to comment!</p>
+                    @endforelse
+                </div>
+
+                <form class="bg-white p-4 rounded-lg shadow-md mt-4" {{ route('about.comments') }} method="POST">
+                    @csrf
+                    
+                    <h3 class="text-lg font-bold mb-2">Add a comment</h3>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2" for="name">
+                            Name
+                        </label>
+                        <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            id="name" type="text" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2" for="comment">
+                            Comment
+                        </label>
+                        <textarea
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            id="comment" rows="3" placeholder="Enter your comment"></textarea>
+                    </div>
+                    <button
+                        class="bg-cyan-500 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        type="submit">
+                        Submit
+                    </button>
+                </form>
+            </div>
+
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <script>
             // Mobile menu functionality
@@ -158,5 +224,3 @@
         </script>
     </body>
     </html>
-</body>
-</html>

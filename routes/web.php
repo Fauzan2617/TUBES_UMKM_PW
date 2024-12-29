@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
 
 Route::get('/', [\App\Http\Controllers\home::class,'index']);
@@ -25,6 +26,9 @@ Route::get('/halamanproduct', [\App\Http\Controllers\halamanproduct::class,'inde
 
 Route::get('/detailproduct', [\App\Http\Controllers\detailproduct::class,'index']);
 
+//crud show user
+Route::get('halamanproduct', [ProductController::class, 'index_user'])->name('halamanproduct');
+
 
 
 // Bagian Admin
@@ -37,3 +41,31 @@ Route::get('views_admin/produk', [\App\Http\Controllers\produk::class,'index']);
 Route::get('views_admin/profile', [\App\Http\Controllers\profile_admin::class,'index']);
 
 Route::get('views_admin/update-delete', [\App\Http\Controllers\update_delete::class,'index']);
+
+
+// sistem crud / admin
+Route::get('views_admin/crudproduk', [ProductController::class, 'create'])->name('views_admin.crudproduk');
+
+Route::post('views_admin/crudproduk', [ProductController::class, 'store'])->name('views_admin.produk');
+
+//crud show admin
+Route::get('views_admin/produk', [ProductController::class, 'index'])->name('views_admin.produk');
+
+// Route untuk menampilkan form edit produk
+Route::get('views_admin/editproduk/{id}', [ProductController::class, 'edit'])->name('views_admin.editproduk');
+
+// Route untuk menyimpan hasil update
+Route::put('views_admin/produk/{id}', [ProductController::class, 'update'])->name('produk.update');
+
+// Route untuk delete produk
+Route::delete('views_admin/produk/{id}', [ProductController::class, 'destroy'])->name('produk.destroy');
+
+// Komen User
+Route::get('/about', [\App\Http\Controllers\CommentController::class,'index'])->name('about');
+
+Route::get('views_admin/dashboardhome', [App\Http\Controllers\CommentController::class, 'index_comment'])->name('views_admin.dashboardhome');
+
+
+Route::post('/about', [App\Http\Controllers\CommentController::class, 'store'])->name('about.comment');
+
+Route::post('views_admin/dashboardhome', [App\Http\Controllers\CommentController::class, 'store_comment'])->name('about.comments');
