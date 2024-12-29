@@ -150,7 +150,7 @@
                                 </p>
                                 <div class="flex items-center">
                                     <p class="text-lg font-semibold text-black cursor-auto my-3">
-                                        ${{ number_format($product->price, 2) }}</p>
+                                        Rp.{{ number_format($product->price, 2) }}</p>
                                 </div>
                             </div>
                         </a>
@@ -226,7 +226,7 @@
                                 </p>
                                 <div class="flex items-center">
                                     <p class="text-lg font-semibold text-black cursor-auto my-3">
-                                        ${{ number_format($product->price, 2) }}</p>
+                                        Rp.{{ number_format($product->price, 2) }}</p>
                                 </div>
                             </div>
                         </a>
@@ -302,7 +302,7 @@
                                 </p>
                                 <div class="flex items-center">
                                     <p class="text-lg font-semibold text-black cursor-auto my-3">
-                                        ${{ number_format($product->price, 2) }}</p>
+                                        Rp.{{ number_format($product->price, 2) }}</p>
                                 </div>
                             </div>
                         </a>
