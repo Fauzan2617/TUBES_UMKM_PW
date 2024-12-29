@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ReportController;
 
 Route::get('/', [\App\Http\Controllers\home::class,'index']);
 Route::get('/home', [\App\Http\Controllers\home::class,'index']);
@@ -69,3 +70,6 @@ Route::get('views_admin/dashboardhome', [App\Http\Controllers\CommentController:
 Route::post('/about', [App\Http\Controllers\CommentController::class, 'store'])->name('about.comment');
 
 Route::post('views_admin/dashboardhome', [App\Http\Controllers\CommentController::class, 'store_comment'])->name('about.comments');
+
+//pdf
+Route::get('/dashboard/pdf', [ReportController::class, 'generateDashboardPdf'])->name('dashboard.pdf');
