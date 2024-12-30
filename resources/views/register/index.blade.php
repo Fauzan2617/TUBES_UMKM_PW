@@ -36,7 +36,7 @@
                     <div class="mt-2">
                         <input id="email" name="email" type="email" autocomplete="email" required
                             value="{{ old('email') }}"
-                            class="block w-full rounded-md border-0 py-1.5 text-neutral-950 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm/6">
+                            class="pl-2 block w-full rounded-md border-0 py-1.5 text-neutral-950 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm/6">
                         @error('email')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -53,7 +53,7 @@
                     <div class="mt-2">
                         <input id="name" name="name" type="text" autocomplete="name" required
                             value="{{ old('name') }}"
-                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm/6">
+                            class="pl-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm/6">
                     </div>
                 </div>
 
@@ -65,7 +65,7 @@
                     <div class="mt-2">
                         <input id="password" name="password" type="password" autocomplete="current-password" required
                             value="{{ old('password') }}"
-                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm/6">
+                            class="pl-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-red-600 sm:text-sm/6">
                     </div>
                 </div>
 
