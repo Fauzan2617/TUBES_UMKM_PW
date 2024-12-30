@@ -1,7 +1,7 @@
 <nav class="relative z-50 h-24 select-none" x-data="{ showMenu: false }">
     <div
         class="container relative flex flex-wrap items-center justify-between h-24 mx-auto overflow-hidden font-medium border-b border-gray-200 md:overflow-visible lg:justify-center sm:px-4 md:px-2 lg:px-0">
-        <div class="flex items-center justify-start w-1/4 h-full pr-4">
+        <div class="flex items-center justify-start w-1/4 h-full lg:pl-20 sm:pl-0">
             <a href="#_" class="flex items-center py-4 space-x-2 font-extrabold text-gray-900 md:py-0">
                 <img src="{{ asset('img/KedaiDiens.png') }}" alt="logo" class="h-20 w-auto">
             </a>
@@ -41,40 +41,82 @@
                 </div>
 
                 @auth
-                    <div x-data="{ open: false }" @click.outside="open=false" class="relative text-sm">
-                        <button @click="open=!open" class="bg-white rounded-md shadow-sm cursor-pointer">
-                            <span class="block px-4 py-2">Welcome {{ auth()->user()->name }}</span>
+                    <div x-data="{ dropdownOpen: false }" class="relative pl-3 lg:pl-20 sm:pl-20">
+                        <button @click="dropdownOpen=true"
+                            class="inline-flex items-center justify-center h-12 py-2 pl-3 pr-12 text-sm font-medium transition-colors bg-white border-0 sm:border md:border lg:border rounded-md text-neutral-700 hover:bg-neutral-100 active:bg-white focus:bg-white focus:outline-none disabled:opacity-50 disabled:pointer-events-none">
+                            <span class="flex items-center justify-center w-full text-center">
+                                <span class="text-sm sm:text-base">{{ auth()->user()->name }}</span>
+                            </span>
+                            <svg class="absolute right-0 w-5 h-5 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+                            </svg>
                         </button>
-                        <ul x-show="open"
-                            class="absolute origin-top-left lg:top-0 md:top-0 sm:top-0 sm:bottom-0 w-32 p-4 mt-10 bg-white rounded-md shadow-sm"
-                            x-transition x-cloak>
-                            @auth
-                                @if (auth()->user()->is_admin)
-                                    <li><a href="/home">Home</a></li>
-                                    <div class="h-px my-1 -mx-1 bg-neutral-200"></div>
-                                    <li><a href="/views_admin/dashboardhome">Dashboard </a></li>
-                                @endif
-                                <div class="h-px my-1 -mx-1 bg-neutral-200"></div>
-                            @endauth
 
-                            <li>
-                                <form action="logout" method="POST">
+                        <div x-show="dropdownOpen" @click.away="dropdownOpen=false"
+                            x-transition:enter="ease-out duration-200" x-transition:enter-start="-translate-y-2"
+                            x-transition:enter-end="translate-y-0"
+                            class="absolute top-0 z-50 w-56 mt-12 -translate-x-1/2 left-1/2 pl-0 lg:pl-20 sm:pl-20" x-cloak>
+                            <div
+                                class="p-1 mt-1 bg-white border rounded-md shadow-md border-neutral-200/70 text-neutral-700">
+                                <div class="px-2 py-1.5 text-sm font-semibold">My Account</div>
+                                <div class="h-px my-1 -mx-1 bg-neutral-200"></div>
+
+                                @if (auth()->user()->is_admin)
+                                    <!-- Admin Menu Items -->
+                                    <a href="/home"
+                                        class="relative flex cursor-default select-none hover:bg-neutral-100 items-center rounded px-2 py-1.5 text-sm outline-none transition-colors data-[disabled]:pointer-events-none data-[disabled]:opacity-50">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mr-2">
+                                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                        </svg>
+                                        <span>Home</span>
+                                    </a>
+
+                                    <a href="/views_admin/dashboardhome"
+                                        class="relative flex cursor-default select-none hover:bg-neutral-100 items-center rounded px-2 py-1.5 text-sm outline-none transition-colors data-[disabled]:pointer-events-none data-[disabled]:opacity-50">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mr-2">
+                                            <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                                            <line x1="2" x2="22" y1="10" y2="10"></line>
+                                        </svg>
+                                        <span>Dashboard</span>
+                                    </a>
+                                    <div class="h-px my-1 -mx-1 bg-neutral-200"></div>
+                                @endif
+
+                                <!-- Logout Button -->
+                                <form action="logout" method="POST" class="w-full">
                                     @csrf
-                                    <button type="submit">Logout</button>
+                                    <button type="submit"
+                                        class="relative flex w-full cursor-default select-none hover:bg-neutral-100 items-center rounded px-2 py-1.5 text-sm outline-none transition-colors data-[disabled]:pointer-events-none data-[disabled]:opacity-50">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mr-2">
+                                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                            <polyline points="16 17 21 12 16 7"></polyline>
+                                            <line x1="21" x2="9" y1="12" y2="12"></line>
+                                        </svg>
+                                        <span>Log out</span>
+
+                                    </button>
                                 </form>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
                 @else
                     <div
                         class="flex flex-col items-start justify-end w-full pt-4 md:items-center md:w-1/3 md:flex-row md:py-0">
-                        <a href="/login" class="w-full px-6 py-2 mr-0 text-gray-700 md:px-3 md:mr-2 lg:mr-3 md:w-auto">Sign
-                            In</a>
+                        <a href="/login"
+                            class="w-full px-6 py-2 mr-0 text-gray-700 md:px-3 md:mr-2 lg:mr-3 md:w-auto">Sign In</a>
                         <a href="/register"
                             class="inline-flex items-center w-full px-5 px-6 py-3 text-sm font-medium leading-4 text-white bg-gray-900 md:w-auto md:rounded-full hover:bg-gray-800 focus:outline-none md:focus:ring-2 focus:ring-0 focus:ring-offset-2 focus:ring-gray-800">Sign
                             Up</a>
                     </div>
-
                 @endauth
             </div>
         </div>
@@ -86,7 +128,8 @@
             </svg>
             <svg class="w-6 h-6 text-gray-700" x-show="showMenu" fill="none" stroke="currentColor"
                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                </path>
             </svg>
         </div>
     </div>
