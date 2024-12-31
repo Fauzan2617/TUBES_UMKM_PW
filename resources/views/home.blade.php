@@ -93,6 +93,11 @@
                             <div class="mx-auto mt-5 text-gray-400 md:mt-8 md:max-w-lg md:text-center md:text-xl">Enjoy
                                 All
                                 Noodle Variants at Kedai Diens !</div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                             <div
                                 class="flex flex-col items-center justify-center mt-8 space-y-4 text-center sm:flex-row sm:space-y-0 sm:space-x-4">
                                 <span class="relative inline-flex w-full md:w-auto">

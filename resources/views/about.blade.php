@@ -95,7 +95,7 @@
                         <div class="text-center">
                             <h1 class="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
                                 About</h1>
-                            <p class="mt-5 text-pretty text-lg font-medium text-gray-500">
+                            <p class="mt-5 text-pretty sm:text-lg font-medium text-gray-500 p-2">
                                 Selamat datang di Kedai Diens, tempat di mana cita rasa asli Indonesia bertemu dengan
                                 kelezatan mie yang menggugah selera. Kami menyajikan mie dengan rempah-rempah bumbu
                                 Indonesia yang kaya, memadukan tradisi kuliner lokal dengan sentuhan inovatif yang
@@ -122,6 +122,14 @@
                                     class="text-sm/6 font-semibold text-gray-900">Our Product<span
                                         aria-hidden="true">→</span></a>
                             </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                                     <!-- End Main Hero Content -->
 
 
@@ -130,7 +138,7 @@
 
 
                                       {{-- COMMENT --}}
-                             <div class="border border-gray-300 p-3 rounded-lg max-w-xl">
+                             <div class="border border-gray-300 p-3 rounded-lg relative w-full mx-auto">
 
                                     {{-- COMMENT ALL PEOPLE --}}
                                     <section class="bg-white px-4 py-12 md:py-24">
