@@ -91,7 +91,7 @@
                                     @endif
 
                                     <!-- Logout Button -->
-                                    <form action="logout" method="POST" class="w-full">
+                                    <form action="{{ route('logout') }}" method="POST" class="w-full">
                                         @csrf
                                         <button type="submit"
                                             class="relative flex w-full cursor-default select-none hover:bg-neutral-100 items-center rounded px-2 py-1.5 text-sm outline-none transition-colors data-[disabled]:pointer-events-none data-[disabled]:opacity-50">
