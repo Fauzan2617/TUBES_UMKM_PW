@@ -138,9 +138,8 @@
                         <!-- Tambahkan link ke halaman edit -->
                         <a href="{{ route('views_admin.editproduk', $product->id) }}">
                             <!-- Gambar Produk -->
-                            <img src="{{ $product->image ? asset('storage/images/products/' . $product->image) : 'https://via.placeholder.com/300' }}"
+                            <img src="{{ $product->image ? asset('storage/images/products/' . $product->image) : asset('img/placeholder.jpg') }}"
                                 alt="{{ $product->name }}" class="h-80 w-72 object-cover rounded-t-xl" />
-
 
                             <!-- Informasi Produk -->
                             <div class="px-4 py-3 w-72">

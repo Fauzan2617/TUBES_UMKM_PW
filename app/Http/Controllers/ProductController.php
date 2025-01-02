@@ -17,34 +17,37 @@ class ProductController extends Controller
 
     // Simpan data ke database
     public function store(Request $request)
-    {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'image' => 'nullable|image|max:2048',
-            'brand' => 'nullable|string|max:255',
-            'price' => 'required|numeric|min:0',
-            'description' => 'nullable|string',
-            'product_type_id' => 'required|exists:product_types,id',
-        ]);
+{
+    $request->validate([
+        'name' => 'required|string|max:255',
+        'image' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
+        'brand' => 'nullable|string|max:255',
+        'price' => 'required|numeric|min:0',
+        'description' => 'nullable|string',
+        'product_type_id' => 'required|exists:product_types,id',
+    ]);
 
-        // Upload gambar jika ada
-        $imagePath = null;
-        if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('img/products', 'public');
-        }
-
-        // Simpan data ke database
-        Product::create([
-            'name' => $request->name,
-            'image' => $imagePath,
-            'brand' => $request->brand,
-            'price' => $request->price,
-            'description' => $request->description,
-            'product_type_id' => $request->product_type_id,
-        ]);
-
-        return redirect()->route('views_admin.produk')->with('success', 'Produk berhasil ditambahkan');
+    // Upload gambar jika ada
+    $imagePath = null;
+    if ($request->hasFile('image')) {
+        // Get original filename
+        $originalName = $request->file('image')->getClientOriginalName();
+        // Store the image in the public/storage/images/products directory
+        $imagePath = $request->file('image')->storeAs('images/products', $originalName, 'public');
     }
+
+    // Simpan data ke database
+    Product::create([
+        'name' => $request->name,
+        'image' => $originalName, // Save only the filename
+        'brand' => $request->brand,
+        'price' => $request->price,
+        'description' => $request->description,
+        'product_type_id' => $request->product_type_id,
+    ]);
+
+    return redirect()->route('views_admin.produk')->with('success', 'Produk berhasil ditambahkan');
+}
 
     // Tampilkan data untuk admin
     public function index()
