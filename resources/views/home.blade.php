@@ -18,7 +18,7 @@
     <script src="https://unpkg.com/alpinejs" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     {{-- END PINES  --}}
-    <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
+    <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet" />
 
 
 
@@ -93,11 +93,11 @@
                             <div class="mx-auto mt-5 text-gray-400 md:mt-8 md:max-w-lg md:text-center md:text-xl">Enjoy
                                 All
                                 Noodle Variants at Kedai Diens !</div>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
                             <div
                                 class="flex flex-col items-center justify-center mt-8 space-y-4 text-center sm:flex-row sm:space-y-0 sm:space-x-4">
                                 <span class="relative inline-flex w-full md:w-auto">
@@ -130,73 +130,103 @@
             <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 text-center sm:text-left">
                 <a href="#_">Noodles, Drink And Snack</a>
             </h1>
-            <p class="mt-2 text-sm sm:text-base lg:text-lg text-gray-500 text-center sm:text-left">All Variant Noodles In Here</p>
-
+            <p class="mt-2 text-sm sm:text-base lg:text-lg text-gray-500 text-center sm:text-left">All Variant Noodles
+                In Here</p>
 
             <!-- Promosi -->
             <div class="grid grid-cols-12 col-span-12 gap-6 mt-8">
-                <div class="flex flex-col items-start col-span-12 overflow-hidden shadow-sm rounded-xl xs:col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 xl:col-span-4 ">
-                    <a href="/halamanproduct#noddles1" class="block transition duration-200 ease-out transform hover:scale-110">
-                        <img class="object-cover object-center w-full shadow-sm h-full" src="{{ asset("img/noddle2.jpg") }}">
+                <!-- Card 1 -->
+                <div
+                    class="flex flex-col items-start col-span-12 overflow-hidden shadow-sm rounded-xl xs:col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 xl:col-span-4">
+                    <a href="/halamanproduct#noddles1"
+                        class="block w-full transition duration-200 ease-out transform hover:scale-110">
+                        <div class="relative w-full aspect-[4/3]">
+                            <img class="absolute inset-0 object-cover object-center w-full h-full"
+                                src="{{ asset('img/noodle.jpeg') }}" alt="Bangladesh Noodles">
+                        </div>
                     </a>
-                    <div class="relative flex flex-col items-start px-6 bg-white border border-t-0 border-gray-200 py-7 rounded-b-2xl">
-                        <div class="bg-red-400 absolute top-0 -mt-3 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-full text-xs font-medium uppercase text-white">
+                    <div
+                        class="relative flex flex-col items-start px-6 bg-white border border-t-0 border-gray-200 py-7 rounded-b-2xl w-full">
+
+                        <div
+                            class="bg-red-400 absolute top-0 -mt-3 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-full text-xs font-medium uppercase text-white">
                             <span> Bangladesh Noodles</span>
                         </div>
                         <h2 class="text-base font-bold sm:text-lg md:text-xl">
                             <a href="/halamanproduct#noddles1">Noodles</a>
                         </h2>
-                        <p class="mt-2 text-sm text-gray-500">Authentic noodles with rich spices from Bangladesh. Savory, spicy, and full of enticing aromas. Perfect for any time!</p>
-                        <a href="/halamanproduct#noddles1" class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md mt-3 bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none">
-                        <button type="button" >
-                        Produk
-                        </button>
-                    </a>
-                    </div>
-                </div>
-
-                <div class="flex flex-col items-start col-span-12 overflow-hidden shadow-sm rounded-xl xs:col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 xl:col-span-4">
-                    <a href="/halamanproduct#drinks2" class="block transition duration-200 ease-out transform hover:scale-110">
-                        <img class="object-cover object-center w-full shadow-sm h-full" src="{{ asset("img/drink.jpg") }}">
-                    </a>
-                    <div class="relative flex flex-col items-start px-6 bg-white border border-t-0 border-gray-200 py-7 rounded-b-2xl">
-                        <div class="bg-red-400 absolute top-0 -mt-3 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-full text-xs font-medium uppercase text-white">
-                            <span>Mojito Apple</span>
-                        </div>
-                        <h2 class="text-base font-bold sm:text-lg md:text-xl">
-                            <a href="/halamanproduct#drinks2">Drinks</a>
-                        </h2>
-                        <p class="mt-2 text-sm text-gray-500">Traditional Indonesian noodles with bold spices and rich flavors. A perfect blend of savory, spicy, and aromatic goodness!</p>
-                        <a href="/halamanproduct#drinks2" class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md mt-3 bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none">
-                            <button type="button" >
-                            Produk
+                        <p class="mt-2 text-sm text-gray-500">Authentic noodles with rich spices from Bangladesh.
+                            Savory, spicy, and full of enticing aromas. Perfect for any time!</p>
+                        <a href="/halamanproduct#noddles1"
+                            class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md mt-3 bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none">
+                            <button type="button">
+                                Produk
                             </button>
                         </a>
                     </div>
                 </div>
 
-                <div class="flex flex-col items-start col-span-12 overflow-hidden shadow-sm rounded-xl xs:col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 xl:col-span-4">
-                    <a href="/halamanproduct#snack3" class="block transition duration-200 ease-out transform hover:scale-110">
-                        <img class="object-cover object-center w-full shadow-sm h-full" src="{{ asset("img/snack2.jpg") }}">
+                <div
+                    class="flex flex-col items-start col-span-12 overflow-hidden shadow-sm rounded-xl xs:col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 xl:col-span-4">
+                    <a href="/halamanproduct#drinks2"
+                        class="block w-full transition duration-200 ease-out transform hover:scale-110">
+                        <div class="relative w-full aspect-[4/3]">
+                            <img class="absolute inset-0 object-cover object-center w-full h-full"
+                                src="{{ asset('img/drink.jpeg') }}" alt="Mojito Apple">
+                        </div>
                     </a>
-                    <div class="relative flex flex-col items-start px-6 bg-white border border-t-0 border-gray-200 py-7 rounded-b-2xl">
-                        <div class="bg-red-400 absolute top-0 -mt-3 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-full text-xs font-medium uppercase text-white">
+                    <div
+                        class="relative flex flex-col items-start px-6 bg-white border border-t-0 border-gray-200 py-7 rounded-b-2xl w-full">
+                        <div
+                            class="bg-red-400 absolute top-0 -mt-3 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-full text-xs font-medium uppercase text-white">
+                            <span>Mojito Apple</span>
+                        </div>
+                        <h2 class="text-base font-bold sm:text-lg md:text-xl">
+                            <a href="/halamanproduct#drinks2">Drinks</a>
+                        </h2>
+                        <p class="mt-2 text-sm text-gray-500">Traditional Indonesian noodles with bold spices and rich
+                            flavors. A perfect blend of savory, spicy, and aromatic goodness!</p>
+                        <a href="/halamanproduct#drinks2"
+                            class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md mt-3 bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none">
+                            <button type="button">
+                                Produk
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="flex flex-col items-start col-span-12 overflow-hidden shadow-sm rounded-xl xs:col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 xl:col-span-4">
+                    <a href="/halamanproduct#snack3"
+                        class="block w-full transition duration-200 ease-out transform hover:scale-110">
+                        <div class="relative w-full aspect-[4/3]">
+                            <img class="absolute inset-0 object-cover object-center w-full h-full"
+                                src="{{ asset('img/snack.jpeg') }}" alt="Sandwich">
+                        </div>
+                    </a>
+                    <div
+                        class="relative flex flex-col items-start px-6 bg-white border border-t-0 border-gray-200 py-7 rounded-b-2xl w-full">
+                        <div
+                            class="bg-red-400 absolute top-0 -mt-3 flex items-center px-3 py-1.5 leading-none w-auto inline-block rounded-full text-xs font-medium uppercase text-white">
                             <span>Sandwich</span>
                         </div>
                         <h2 class="text-base font-bold sm:text-lg md:text-xl">
                             <a href="/halamanproduct#snack3">Snack</a>
                         </h2>
-                        <p class="mt-2 text-sm text-gray-500">A snack is a small portion of food typically consumed between meals. It can be sweet or savory, ranging from chips, cookies, and candies to healthier. </p>
-                        <a href="/detailproduct" class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md mt-3 bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none">
-                            <button type="button" >
-                            Produk
+                        <p class="mt-2 text-sm text-gray-500">A snack is a small portion of food typically consumed
+                            between meals. It can be sweet or savory, ranging from chips, cookies, and candies to
+                            healthier. </p>
+                        <a href="/detailproduct"
+                            class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md mt-3 bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none">
+                            <button type="button">
+                                Produk
                             </button>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-            <!-- end Promosi -->
+        <!-- end Promosi -->
         </div>
     </section>
     {{-- AKHIR MENU MAKANAN DAN MINUMAN  --}}
@@ -222,14 +252,19 @@
                         rows="4" required></textarea>
                 </div>
                 <!-- Tombol Submit -->
-                <button type="submit" class="btn-kirim px-8 py-4 bg-blue-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white rounded-lg">
+                <button type="submit"
+                    class="btn-kirim px-8 py-4 bg-blue-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white rounded-lg">
                     Submit
                 </button>
-            
+
                 <!-- Tombol Loading -->
-                <button type="button" class="btn-loading hidden px-8 py-4 flex justify-center items-center bg-gray-500 text-white rounded-lg">
-                    <svg width="20" height="20" fill="currentColor" class="mr-2 animate-spin" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M526 1394q0 53-37.5 90.5t-90.5 37.5q-52 0-90-38t-38-90q0-53 37.5-90.5t90.5-37.5 90.5 37.5 37.5 90.5zm498 206q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-704-704q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm1202 498q0 52-38 90t-90 38q-53 0-90.5-37.5t-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-964-996q0 66-47 113t-113 47-113-47-47-113 47-113 113-47 113 47 47 113zm1170 498q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-640-704q0 80-56 136t-136 56-136-56-56-136 56-136 136-56 136 56 56 136zm530 206q0 93-66 158.5t-158 65.5q-93 0-158.5-65.5t-65.5-158.5q0-92 65.5-158t158.5-66q92 0 158 66t66 158z"></path>
+                <button type="button"
+                    class="btn-loading hidden px-8 py-4 flex justify-center items-center bg-gray-500 text-white rounded-lg">
+                    <svg width="20" height="20" fill="currentColor" class="mr-2 animate-spin"
+                        viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M526 1394q0 53-37.5 90.5t-90.5 37.5q-52 0-90-38t-38-90q0-53 37.5-90.5t90.5-37.5 90.5 37.5 37.5 90.5zm498 206q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-704-704q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm1202 498q0 52-38 90t-90 38q-53 0-90.5-37.5t-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-964-996q0 66-47 113t-113 47-113-47-47-113 47-113 113-47 113 47 47 113zm1170 498q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5 37.5-90.5 90.5-37.5 90.5 37.5 37.5 90.5zm-640-704q0 80-56 136t-136 56-136-56-56-136 56-136 136-56 136 56 56 136zm530 206q0 93-66 158.5t-158 65.5q-93 0-158.5-65.5t-65.5-158.5q0-92 65.5-158t158.5-66q92 0 158 66t66 158z">
+                        </path>
                     </svg>
                     Loading...
                 </button>
@@ -294,35 +329,39 @@
 
     <script src="{{ asset('js/script.js') }}"></script>
     <script>
-       const scriptURL = 'https://script.google.com/macros/s/AKfycbxLx0jffrw-FYIuPf9gFhRqX0SmtEMDKR-VZLMfC-opreVkjz1Z0CLcw06mZTR4tU_N1w/exec';
-const form = document.forms['contact_form'];
-const submitButton = document.querySelector('.btn-kirim');
-const loadingButton = document.querySelector('.btn-loading');
+        const scriptURL =
+            'https://script.google.com/macros/s/AKfycbxLx0jffrw-FYIuPf9gFhRqX0SmtEMDKR-VZLMfC-opreVkjz1Z0CLcw06mZTR4tU_N1w/exec';
+        const form = document.forms['contact_form'];
+        const submitButton = document.querySelector('.btn-kirim');
+        const loadingButton = document.querySelector('.btn-loading');
 
-form.addEventListener('submit', e => {
-    e.preventDefault(); // Mencegah reload halaman
+        form.addEventListener('submit', e => {
+            e.preventDefault(); // Mencegah reload halaman
 
-    // Sembunyikan tombol submit dan tampilkan tombol loading
-    submitButton.classList.add('hidden');
-    loadingButton.classList.remove('hidden');
+            // Sembunyikan tombol submit dan tampilkan tombol loading
+            submitButton.classList.add('hidden');
+            loadingButton.classList.remove('hidden');
 
-    // Kirim data ke Google Apps Script
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => {
-            console.log('Success!', response); // Log sukses di console
-            alert('Data berhasil dikirim!'); // Menampilkan pesan sukses
-            form.reset(); // Reset form setelah pengiriman
-        })
-        .catch(error => {
-            console.error('Error!', error.message); // Log error di console
-            alert('Terjadi kesalahan: ' + error.message); // Pesan kesalahan
-        })
-        .finally(() => {
-            // Kembalikan tombol submit dan sembunyikan tombol loading
-            submitButton.classList.remove('hidden');
-            loadingButton.classList.add('hidden');
+            // Kirim data ke Google Apps Script
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => {
+                    console.log('Success!', response); // Log sukses di console
+                    alert('Data berhasil dikirim!'); // Menampilkan pesan sukses
+                    form.reset(); // Reset form setelah pengiriman
+                })
+                .catch(error => {
+                    console.error('Error!', error.message); // Log error di console
+                    alert('Terjadi kesalahan: ' + error.message); // Pesan kesalahan
+                })
+                .finally(() => {
+                    // Kembalikan tombol submit dan sembunyikan tombol loading
+                    submitButton.classList.remove('hidden');
+                    loadingButton.classList.add('hidden');
+                });
         });
-});
     </script>
 
 
@@ -330,30 +369,30 @@ form.addEventListener('submit', e => {
 
 
 
-<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
     <script>
         // Where you want to render the map.
-var element = document.getElementById('osm-map');
+        var element = document.getElementById('osm-map');
 
-// Height has to be set. You can do this in CSS too.
-element.style = 'height:35rem; width:35rem; ';
+        // Height has to be set. You can do this in CSS too.
+        element.style = 'height:35rem; width:35rem; ';
 
-// Create Leaflet map on map element.
-var map = L.map(element);
+        // Create Leaflet map on map element.
+        var map = L.map(element);
 
-// Add OSM tile layer to the Leaflet map.
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+        // Add OSM tile layer to the Leaflet map.
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
 
-// Target's GPS coordinates.
-var target = L.latLng('-6.919124025938159', '107.56366832641821');
+        // Target's GPS coordinates.
+        var target = L.latLng('-6.919124025938159', '107.56366832641821');
 
-// Set map's center to target with zoom 14.
-map.setView(target, 14);
+        // Set map's center to target with zoom 14.
+        map.setView(target, 14);
 
-// Place a marker on the same location.
-L.marker(target).addTo(map);
+        // Place a marker on the same location.
+        L.marker(target).addTo(map);
     </script>
 
 
