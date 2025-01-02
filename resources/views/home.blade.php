@@ -138,7 +138,7 @@
                 <!-- Card 1 -->
                 <div
                     class="flex flex-col items-start col-span-12 overflow-hidden shadow-sm rounded-xl xs:col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 xl:col-span-4">
-                    <a href="/halamanproduct#noddles1"
+                    <a href="/detailproduct"
                         class="block w-full transition duration-200 ease-out transform hover:scale-110">
                         <div class="relative w-full aspect-[4/3]">
                             <img class="absolute inset-0 object-cover object-center w-full h-full"
@@ -153,11 +153,11 @@
                             <span> Bangladesh Noodles</span>
                         </div>
                         <h2 class="text-base font-bold sm:text-lg md:text-xl">
-                            <a href="/halamanproduct#noddles1">Noodles</a>
+                            <a href="/detailproduct">Noodles</a>
                         </h2>
                         <p class="mt-2 text-sm text-gray-500">Authentic noodles with rich spices from Bangladesh.
                             Savory, spicy, and full of enticing aromas. Perfect for any time!</p>
-                        <a href="/halamanproduct#noddles1"
+                        <a href="/detailproduct"
                             class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md mt-3 bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none">
                             <button type="button">
                                 Produk
@@ -168,7 +168,7 @@
 
                 <div
                     class="flex flex-col items-start col-span-12 overflow-hidden shadow-sm rounded-xl xs:col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 xl:col-span-4">
-                    <a href="/halamanproduct#drinks2"
+                    <a href="/detailproduct"
                         class="block w-full transition duration-200 ease-out transform hover:scale-110">
                         <div class="relative w-full aspect-[4/3]">
                             <img class="absolute inset-0 object-cover object-center w-full h-full"
@@ -182,11 +182,11 @@
                             <span>Mojito Apple</span>
                         </div>
                         <h2 class="text-base font-bold sm:text-lg md:text-xl">
-                            <a href="/halamanproduct#drinks2">Drinks</a>
+                            <a href="/detailproduct">Drinks</a>
                         </h2>
                         <p class="mt-2 text-sm text-gray-500">Traditional Indonesian noodles with bold spices and rich
                             flavors. A perfect blend of savory, spicy, and aromatic goodness!</p>
-                        <a href="/halamanproduct#drinks2"
+                        <a href="/detailproduct"
                             class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium tracking-wide text-white transition-colors duration-200 rounded-md mt-3 bg-neutral-950 hover:bg-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900 focus:shadow-outline focus:outline-none">
                             <button type="button">
                                 Produk
@@ -197,7 +197,7 @@
 
                 <div
                     class="flex flex-col items-start col-span-12 overflow-hidden shadow-sm rounded-xl xs:col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-6 xl:col-span-4">
-                    <a href="/halamanproduct#snack3"
+                    <a href="/detailproduct"
                         class="block w-full transition duration-200 ease-out transform hover:scale-110">
                         <div class="relative w-full aspect-[4/3]">
                             <img class="absolute inset-0 object-cover object-center w-full h-full"
@@ -211,7 +211,7 @@
                             <span>Sandwich</span>
                         </div>
                         <h2 class="text-base font-bold sm:text-lg md:text-xl">
-                            <a href="/halamanproduct#snack3">Snack</a>
+                            <a href="/detailproduct">Snack</a>
                         </h2>
                         <p class="mt-2 text-sm text-gray-500">A snack is a small portion of food typically consumed
                             between meals. It can be sweet or savory, ranging from chips, cookies, and candies to
