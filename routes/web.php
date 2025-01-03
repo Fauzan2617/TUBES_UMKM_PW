@@ -47,7 +47,7 @@ Route::get('views_admin/update-delete', [\App\Http\Controllers\update_delete::cl
 // sistem crud / admin
 Route::get('views_admin/crudproduk', [ProductController::class, 'create'])->name('views_admin.crudproduk');
 
-Route::post('views_admin/crudproduk', [ProductController::class, 'store'])->name('views_admin.produk');
+Route::post('views_admin/crudproduk', [ProductController::class, 'store'])->name('views_admin.crudproduk');
 
 //crud show admin
 Route::get('views_admin/produk', [ProductController::class, 'index'])->name('views_admin.produk');

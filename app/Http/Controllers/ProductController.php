@@ -6,6 +6,8 @@ use App\Models\Product;
 use App\Models\ProductType;
 use Illuminate\Http\Request;
 use App\Http\Controllers\crudproduk;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
 
 class ProductController extends Controller
 {
@@ -17,37 +19,40 @@ class ProductController extends Controller
 
     // Simpan data ke database
     public function store(Request $request)
-{
-    $request->validate([
-        'name' => 'required|string|max:255',
-        'image' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
-        'brand' => 'nullable|string|max:255',
-        'price' => 'required|numeric|min:0',
-        'description' => 'nullable|string',
-        'product_type_id' => 'required|exists:product_types,id',
-    ]);
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'image' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
+            'brand' => 'nullable|string|max:255',
+            'price' => 'required|numeric|min:0',
+            'description' => 'nullable|string',
+            'product_type_id' => 'required|exists:product_types,id',
+        ]);
 
-    // Upload gambar jika ada
-    $imagePath = null;
-    if ($request->hasFile('image')) {
-        // Get original filename
-        $originalName = $request->file('image')->getClientOriginalName();
-        // Store the image in the public/storage/images/products directory
-        $imagePath = $request->file('image')->storeAs('images/products', $originalName, 'public');
+        // Upload gambar jika ada
+        $imagePath = null;
+        if ($request->hasFile('image')) {
+            // Ambil nama asli file gambar
+            $originalName = $request->file('image')->getClientOriginalName();
+            // Buat nama unik dengan menambahkan timestamp
+            $uniqueName = time() . '_' . $originalName;
+            // Simpan gambar dengan nama unik di folder 'images/products'
+            $imagePath = $request->file('image')->storeAs('images/products', $uniqueName, 'public');
+        }
+
+        // Simpan data ke database
+        Product::create([
+            'name' => $request->name,
+            'image' => $imagePath, // Simpan path lengkap gambar
+            'brand' => $request->brand,
+            'price' => $request->price,
+            'description' => $request->description,
+            'product_type_id' => $request->product_type_id,
+        ]);
+
+        return redirect()->route('views_admin.produk')->with('success', 'Produk berhasil ditambahkan!');
     }
 
-    // Simpan data ke database
-    Product::create([
-        'name' => $request->name,
-        'image' => $originalName, // Save only the filename
-        'brand' => $request->brand,
-        'price' => $request->price,
-        'description' => $request->description,
-        'product_type_id' => $request->product_type_id,
-    ]);
-
-    return redirect()->route('views_admin.produk')->with('success', 'Produk berhasil ditambahkan');
-}
 
     // Tampilkan data untuk admin
     public function index()
@@ -74,7 +79,6 @@ class ProductController extends Controller
         return view('views_admin.editproduk', compact('product', 'productTypes'));
     }
 
-    // Memperbarui post berdasarkan ID
     public function update(Request $request, $id)
     {
         // Validasi input sesuai dengan struktur tabel products
@@ -101,19 +105,28 @@ class ProductController extends Controller
         if ($request->hasFile('image')) {
             // Ambil nama asli file gambar
             $originalName = $request->file('image')->getClientOriginalName();
+            // Tambahkan timestamp pada nama file untuk membuatnya unik
+            $uniqueName = time() . '_' . $originalName;
 
-            // Simpan gambar dengan nama aslinya di folder 'images/products'
-            $path = $request->file('image')->storeAs('images/products', $originalName, 'public');
+            // Simpan gambar dengan nama unik di folder 'images/products'
+            $path = $request->file('image')->storeAs('images/products', $uniqueName, 'public');
 
             // Simpan path gambar ke dalam database
-            $update_produk->image = 'images/products/' . $originalName;
+            $update_produk->image = 'images/products/' . $uniqueName;
+
+            // Log path gambar yang disimpan untuk debugging
+            Log::info('Path gambar disimpan: ' . $update_produk->image);
         }
 
+        // Simpan perubahan produk ke database
+        $update_produk->save();
 
-        $update_produk->save(); // Simpan perubahan ke database
+        // Hapus cache jika ada
+        Cache::flush();
 
-        return redirect()->route('views_admin.produk')->with('success', 'Produk berhasil diupdate');
+        return redirect()->route('views_admin.produk', $id)->with('success', 'Produk berhasil diperbarui!');
     }
+
 
     // Menghapus post berdasarkan ID
     public function destroy($id)

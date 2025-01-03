@@ -88,7 +88,7 @@
 
 
 
-    {{-- GARIS BATAS UNTUK JUDUL SNACKS --}}
+    {{-- GARIS BATAS UNTUK JUDUL nOODLES --}}
     <div class="container mx-auto p-4">
 
         <section class="relative w-full px-8 text-gray-700 bg-white body-font" data-tails-scripts="//unpkg.com/alpinejs"
@@ -127,7 +127,7 @@
                 </div>
             </div>
         </section>
-        {{-- END GARIS BATAS UNTUK JUDUL SNACKS --}}
+        {{-- END GARIS BATAS UNTUK JUDUL NOODLES --}}
         <section id="Projects"
             class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
 
@@ -138,8 +138,7 @@
                         <!-- Tambahkan link ke halaman edit -->
                         <a href="{{ route('views_admin.editproduk', $product->id) }}">
                             <!-- Gambar Produk -->
-                            <img src="{{ $product->image ? asset('storage/images/products/' . $product->image) : asset('img/placeholder.jpg') }}"
-                                alt="{{ $product->name }}" class="h-80 w-72 object-cover rounded-t-xl" />
+                            <img src="{{ asset('storage/' . $product->image) . '?' . time() }}" alt="{{ $product->name }}" class="h-80 w-72 object-cover rounded-t-xl" />
 
                             <!-- Informasi Produk -->
                             <div class="px-4 py-3 w-72">
@@ -213,8 +212,8 @@
                         <!-- Tambahkan link ke halaman edit -->
                         <a href="{{ route('views_admin.editproduk', $product->id) }}">
                             <!-- Gambar Produk -->
-                            <img src="{{ $product->image ? asset('storage/images/products/' . $product->image) : 'https://via.placeholder.com/300' }}"
-                                alt="{{ $product->name }}" class="h-80 w-72 object-cover rounded-t-xl" />
+                            <img src="{{ asset('storage/' . $product->image) . '?' . time() }}" alt="{{ $product->name }}" class="h-80 w-72 object-cover rounded-t-xl" />
+
 
 
                             <!-- Informasi Produk -->
@@ -289,8 +288,8 @@
                         <!-- Tambahkan link ke halaman edit -->
                         <a href="{{ route('views_admin.editproduk', $product->id) }}">
                             <!-- Gambar Produk -->
-                            <img src="{{ $product->image ? asset('storage/images/products/' . $product->image) : 'https://via.placeholder.com/300' }}"
-                                alt="{{ $product->name }}" class="h-80 w-72 object-cover rounded-t-xl" />
+                            <img src="{{ asset('storage/' . $product->image) . '?' . time() }}" alt="{{ $product->name }}" class="h-80 w-72 object-cover rounded-t-xl" />
+
 
 
                             <!-- Informasi Produk -->
