@@ -68,8 +68,7 @@
                                 <!-- Card content remains the same -->
                                 <a href="">
                                     <!-- Gambar Produk -->
-                                    <img src="{{ $product->image ? asset('storage/images/products/' . $product->image) : 'https://via.placeholder.com/300' }}"
-                                        alt="{{ $product->name }}" class="h-80 w-72 object-cover rounded-t-xl" />
+                                    <img src="{{ asset('storage/' . $product->image) . '?' . time() }}" alt="{{ $product->name }}" class="h-80 w-72 object-cover rounded-t-xl" />
 
 
                                     <!-- Informasi Produk -->
@@ -115,8 +114,7 @@
                                 data-brand="{{ strtolower($product->brand ?? '') }}">
                                 <a href="">
                                     <!-- Gambar Produk -->
-                                    <img src="{{ $product->image ? asset('storage/images/products/' . $product->image) : 'https://via.placeholder.com/300' }}"
-                                        alt="{{ $product->name }}" class="h-80 w-72 object-cover rounded-t-xl" />
+                                    <img src="{{ asset('storage/' . $product->image) . '?' . time() }}" alt="{{ $product->name }}" class="h-80 w-72 object-cover rounded-t-xl" />
 
 
                                     <!-- Informasi Produk -->
@@ -164,8 +162,7 @@
                                 data-brand="{{ strtolower($product->brand ?? '') }}">
                                 <a href="">
                                     <!-- Gambar Produk -->
-                                    <img src="{{ $product->image ? asset('storage/images/products/' . $product->image) : 'https://via.placeholder.com/300' }}"
-                                        alt="{{ $product->name }}" class="h-80 w-72 object-cover rounded-t-xl" />
+                                    <img src="{{ asset('storage/' . $product->image) . '?' . time() }}" alt="{{ $product->name }}" class="h-80 w-72 object-cover rounded-t-xl" />
 
 
                                     <!-- Informasi Produk -->
