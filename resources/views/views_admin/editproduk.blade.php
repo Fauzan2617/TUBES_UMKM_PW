@@ -91,6 +91,8 @@
         </form>
 
     </div>
+
+
     <script>
         // Mobile menu functionality
         const mobileMenuButton = document.querySelector('.mobile-menu-button');
@@ -121,6 +123,8 @@
             setTimeout(() => notificationIcon.classList.remove('scale-110'), 200);
         }, 5000);
     </script>
+
+
 </body>
 
 </html>

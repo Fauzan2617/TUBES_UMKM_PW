@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="id">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{-- Logo Situs --}}
     <link rel="icon" href="{{ asset('img/KedaiDiens.png') }}" type="image/png" sizes="512x512">
-
     {{-- End Logo --}}
     <title>Kedai Diens</title>
     {{-- font aws --}}
@@ -19,6 +19,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     {{-- END PINES  --}}
     <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet" />
+
+
+
+
+
 
 
 

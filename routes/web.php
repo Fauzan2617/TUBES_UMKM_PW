@@ -15,7 +15,6 @@ Route::get('/home', [\App\Http\Controllers\home::class,'index']);
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
@@ -25,11 +24,11 @@ route::get('/about', fn() => view('about'));
 
 Route::get('/halamanproduct', [\App\Http\Controllers\halamanproduct::class,'index']);
 
-Route::get('/detailproduct', [\App\Http\Controllers\detailproduct::class,'index']);
+// Route untuk menampilkan form menampilkan produk
+Route::get('/detailproduct/{id}', [\App\Http\Controllers\detailproduct::class, 'menampilkan'])->name('detailproduct');
 
 //crud show user
 Route::get('halamanproduct', [ProductController::class, 'index_user'])->name('halamanproduct');
-
 
 
 // Bagian Admin
@@ -65,7 +64,6 @@ Route::delete('views_admin/produk/{id}', [ProductController::class, 'destroy'])-
 Route::get('/about', [\App\Http\Controllers\CommentController::class,'index'])->name('about');
 
 Route::get('views_admin/dashboardhome', [App\Http\Controllers\CommentController::class, 'index_comment'])->name('views_admin.dashboardhome');
-
 
 Route::post('/about', [App\Http\Controllers\CommentController::class, 'store'])->name('about.comment');
 

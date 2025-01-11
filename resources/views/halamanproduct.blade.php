@@ -66,7 +66,7 @@
                                 data-name="{{ strtolower($product->name) }}"
                                 data-brand="{{ strtolower($product->brand ?? '') }}">
                                 <!-- Card content remains the same -->
-                                <a href="">
+                                <a href="{{ route('detailproduct', $product->id) }}">
                                     <!-- Gambar Produk -->
                                     <img src="{{ asset('storage/' . $product->image) . '?' . time() }}" alt="{{ $product->name }}" class="h-80 w-72 object-cover rounded-t-xl" />
 
