@@ -61,7 +61,6 @@ class ProductController extends Controller
         return view('views_admin.produk', compact('products'));
     }
 
-
     // Tampilkan data untuk user
     public function index_user()
     {
